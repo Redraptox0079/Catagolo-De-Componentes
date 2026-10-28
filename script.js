@@ -1,4 +1,4 @@
-// Base de datos de productos utilizando URLs directas de recursos de Newegg
+// Base de datos de productos con URLs directas de recursos e imagenes de Newegg
 const products = [
     {
         id: 1,
@@ -6,7 +6,8 @@ const products = [
         category: "workstation",
         price: "$9999.99",
         description: "96 nucleos, 192 hilos. Disenado para calculo masivo y estaciones de trabajo profesionales de alto rendimiento.",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        productUrl: "https://newegg.com"
     },
     {
         id: 2,
@@ -14,7 +15,8 @@ const products = [
         category: "workstation",
         price: "$6799.49",
         description: "48GB GDDR6 con ECC. Arquitectura Ada Lovelace para renderizado ultra complejo y simulacion cientifica avanzada.",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        productUrl: "https://newegg.com"
     },
     {
         id: 3,
@@ -22,7 +24,8 @@ const products = [
         category: "desktop",
         price: "$529.99",
         description: "Procesador para escritorio de alta gama. 24 nucleos, velocidad maxima de 6.0 GHz para tareas exigentes.",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        productUrl: "https://newegg.com"
     },
     {
         id: 4,
@@ -30,7 +33,8 @@ const products = [
         category: "desktop",
         price: "$219.99",
         description: "Memoria RAM DDR5 6400MHz optimizada para plataformas de ultima generacion y multitarea intensiva.",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        productUrl: "https://newegg.com"
     },
     {
         id: 5,
@@ -38,7 +42,8 @@ const products = [
         category: "laptop",
         price: "$3899.00",
         description: "Pantalla de 18 pulgadas, Intel i9, RTX 4090, 32GB DDR5. El reemplazo definitivo para tu computadora de escritorio.",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        productUrl: "https://newegg.com"
     },
     {
         id: 6,
@@ -46,7 +51,8 @@ const products = [
         category: "laptop",
         price: "$1849.99",
         description: "Chasis ultra liviano de fibra de carbono. Intel Core Ultra 7, enfocado en productividad y entornos empresariales.",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        productUrl: "https://newegg.com"
     },
     {
         id: 7,
@@ -54,7 +60,8 @@ const products = [
         category: "mobile",
         price: "$1299.99",
         description: "Dispositivo movil con Titanium Frame, almacenamiento de 512GB, camara de 200MP e inteligencia artificial integrada.",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        productUrl: "https://newegg.com"
     },
     {
         id: 8,
@@ -62,7 +69,8 @@ const products = [
         category: "mobile",
         price: "$1199.00",
         description: "Chip A17 Pro, acabado en titanio de grado aeroespacial, sistema de camaras pro y conector universal USB-C.",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        productUrl: "https://newegg.com"
     }
 ];
 
@@ -92,7 +100,7 @@ function renderProducts(categoryFilter) {
             </div>
             <div>
                 <div class="product-price">${product.price}</div>
-                <button class="buy-btn">[ ADQUIRIR ]</button>
+                <a href="${product.productUrl}" target="_blank" class="buy-btn" style="display: block; text-align: center; text-decoration: none;">[ ADQUIRIR ]</a>
             </div>
         `;
         catalogGrid.appendChild(card);
