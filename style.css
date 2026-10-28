@@ -129,4 +129,24 @@ footer {
     text-align: center;
     font-size: 0.8rem;
     letter-spacing: 1px;
+}/* Corrección adicional para contenedores de imagen */
+.product-image-container {
+    position: relative;
+    background-color: #000;
 }
+
+/* Texto de carga retro por si el firewall tarda en responder */
+.product-image-container::before {
+    content: "LOADING IMAGE...";
+    position: absolute;
+    color: #116611;
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.product-card img {
+    position: relative;
+    z-index: 2;
+    background-color: #000;
+}
+
