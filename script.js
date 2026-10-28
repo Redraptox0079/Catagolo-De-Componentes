@@ -6,7 +6,8 @@ const products = [
         category: "workstation",
         description: "Intel Core i7, 32GB RAM, 1TB SSD, NVIDIA T1000. Alta capacidad para diseno e ingenieria.",
         price: "$1,499.99",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        url: "https://newegg.com"
     },
     {
         id: 2,
@@ -14,7 +15,8 @@ const products = [
         category: "workstation",
         description: "Intel Xeon W-1250, 64GB ECC RAM, 2TB NVMe SSD. Estabilidad empresarial extrema.",
         price: "$2,150.00",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        url: "https://newegg.com"
     },
     {
         id: 3,
@@ -22,7 +24,8 @@ const products = [
         category: "desktop",
         description: "AMD Ryzen 5, 16GB DDR4, 500GB SSD, RTX 3060. Optimizada para estaciones de computo estandar.",
         price: "$899.99",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        url: "https://newegg.com"
     },
     {
         id: 4,
@@ -30,7 +33,8 @@ const products = [
         category: "desktop",
         description: "Intel Core i5, 12GB RAM, 512GB SSD. Computadora de escritorio eficiente para oficina y escuela.",
         price: "$549.99",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        url: "https://newegg.com"
     },
     {
         id: 5,
@@ -38,7 +42,8 @@ const products = [
         category: "laptop",
         description: "Intel Core i7, RTX 4060, 16GB RAM, 512GB SSD. Rendimiento portatil de ultima generacion.",
         price: "$1,099.00",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        url: "https://newegg.com"
     },
     {
         id: 6,
@@ -46,7 +51,8 @@ const products = [
         category: "laptop",
         description: "AMD Ryzen 7, 16GB RAM, 1TB SSD. Chasis de aluminio ultra liviano con pantalla de alta definicion.",
         price: "$799.99",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        url: "https://newegg.com"
     },
     {
         id: 7,
@@ -54,7 +60,8 @@ const products = [
         category: "mobile",
         description: "5G, 256GB Almacenamiento, Camara de 200MP, Pantalla Dynamic AMOLED. Rendimiento premium.",
         price: "$1,199.99",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        url: "https://newegg.com"
     },
     {
         id: 8,
@@ -62,7 +69,8 @@ const products = [
         category: "mobile",
         description: "5G, 256GB Almacenamiento, Pantalla Fluida de 144Hz. Dispositivo movil versatil de gama media alta.",
         price: "$549.99",
-        image: "https://neweggimages.com"
+        image: "https://neweggimages.com",
+        url: "https://newegg.com"
     }
 ];
 
@@ -90,7 +98,7 @@ function displayProducts(productsToRender) {
             </div>
             <div>
                 <div class="product-price">${product.price}</div>
-                <a href="#" class="buy-btn">[ ADQUIRIR ]</a>
+                <a href="${product.url}" target="_blank" class="buy-btn">[ ADQUIRIR ]</a>
             </div>
         `;
         container.appendChild(card);
@@ -98,7 +106,6 @@ function displayProducts(productsToRender) {
 }
 
 function filterProducts(category) {
-    // Manejo de estado activo de botones
     const buttons = document.querySelectorAll('.nav-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
     
@@ -107,7 +114,6 @@ function filterProducts(category) {
         event.target.classList.add('active');
     }
 
-    // Filtrado logico
     if (category === 'all') {
         displayProducts(products);
     } else {
@@ -116,7 +122,6 @@ function filterProducts(category) {
     }
 }
 
-// Inicializar catalogo al cargar la pagina
 window.onload = () => {
     displayProducts(products);
 };
