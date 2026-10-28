@@ -6,7 +6,7 @@ const products = [
         category: "workstation",
         description: "Intel Core i7, 32GB RAM, 1TB SSD, NVIDIA T1000. Alta capacidad para diseno e ingenieria.",
         price: "$1,499.99",
-        image: "https://neweggimages.com",
+        image: "https://newegg.com",
         url: "https://newegg.com"
     },
     {
@@ -15,7 +15,7 @@ const products = [
         category: "workstation",
         description: "Intel Xeon W-1250, 64GB ECC RAM, 2TB NVMe SSD. Estabilidad empresarial extrema.",
         price: "$2,150.00",
-        image: "https://neweggimages.com",
+        image: "https://newegg.com",
         url: "https://newegg.com"
     },
     {
@@ -24,7 +24,7 @@ const products = [
         category: "desktop",
         description: "AMD Ryzen 5, 16GB DDR4, 500GB SSD, RTX 3060. Optimizada para estaciones de computo estandar.",
         price: "$899.99",
-        image: "https://neweggimages.com",
+        image: "https://newegg.com",
         url: "https://newegg.com"
     },
     {
@@ -33,7 +33,7 @@ const products = [
         category: "desktop",
         description: "Intel Core i5, 12GB RAM, 512GB SSD. Computadora de escritorio eficiente para oficina y escuela.",
         price: "$549.99",
-        image: "https://neweggimages.com",
+        image: "https://newegg.com",
         url: "https://newegg.com"
     },
     {
@@ -42,7 +42,7 @@ const products = [
         category: "laptop",
         description: "Intel Core i7, RTX 4060, 16GB RAM, 512GB SSD. Rendimiento portatil de ultima generacion.",
         price: "$1,099.00",
-        image: "https://neweggimages.com",
+        image: "https://newegg.com",
         url: "https://newegg.com"
     },
     {
@@ -51,7 +51,7 @@ const products = [
         category: "laptop",
         description: "AMD Ryzen 7, 16GB RAM, 1TB SSD. Chasis de aluminio ultra liviano con pantalla de alta definicion.",
         price: "$799.99",
-        image: "https://neweggimages.com",
+        image: "https://newegg.com",
         url: "https://newegg.com"
     },
     {
@@ -60,7 +60,7 @@ const products = [
         category: "mobile",
         description: "5G, 256GB Almacenamiento, Camara de 200MP, Pantalla Dynamic AMOLED. Rendimiento premium.",
         price: "$1,199.99",
-        image: "https://neweggimages.com",
+        image: "https://newegg.com",
         url: "https://newegg.com"
     },
     {
@@ -69,7 +69,7 @@ const products = [
         category: "mobile",
         description: "5G, 256GB Almacenamiento, Pantalla Fluida de 144Hz. Dispositivo movil versatil de gama media alta.",
         price: "$549.99",
-        image: "https://neweggimages.com",
+        image: "https://newegg.com",
         url: "https://newegg.com"
     }
 ];
