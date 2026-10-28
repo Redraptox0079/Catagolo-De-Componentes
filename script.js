@@ -1,4 +1,4 @@
-// Base de datos de productos con URLs directas de recursos e imagenes de Newegg
+// Base de datos corregida con formato absoluto y politicas de elusion de hotlinking
 const products = [
     {
         id: 1,
@@ -91,7 +91,7 @@ function renderProducts(categoryFilter) {
         card.innerHTML = `
             <div>
                 <div class="product-image-container">
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${product.image}" alt="${product.name}" referrerpolicy="no-referrer">
                 </div>
                 <div class="product-info">
                     <h3>${product.name}</h3>
@@ -100,7 +100,7 @@ function renderProducts(categoryFilter) {
             </div>
             <div>
                 <div class="product-price">${product.price}</div>
-                <a href="${product.productUrl}" target="_blank" class="buy-btn" style="display: block; text-align: center; text-decoration: none;">[ ADQUIRIR ]</a>
+                <a href="${product.productUrl}" target="_blank" rel="noreferrer" class="buy-btn" style="display: block; text-align: center; text-decoration: none;">[ VER EN NEWEGG ]</a>
             </div>
         `;
         catalogGrid.appendChild(card);
