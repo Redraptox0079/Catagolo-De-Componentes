@@ -6,7 +6,7 @@ const products = [
         category: "workstation",
         description: "Intel Core i7, 32GB RAM, 1TB SSD, NVIDIA RTX A2000. Potencia compacta profesional.",
         price: "$1,649.99",
-        image: "https://googleusercontent.com",
+        image: "https://imgur.com",
         url: "https://bestbuy.com"
     },
     {
@@ -15,7 +15,7 @@ const products = [
         category: "workstation",
         description: "Intel Core i9, 64GB RAM, 2TB SSD, NVIDIA RTX 4000 Ada. Estacion avanzada de arquitectura.",
         price: "$2,899.99",
-        image: "https://googleusercontent.com",
+        image: "https://imgur.com",
         url: "https://bestbuy.com"
     },
     {
@@ -24,7 +24,7 @@ const products = [
         category: "desktop",
         description: "AMD Ryzen 5, 16GB DDR5 memory, 500GB SSD, AMD Radeon RX 6500 XT. Estabilidad grafica basica.",
         price: "$649.99",
-        image: "https://googleusercontent.com",
+        image: "https://imgur.com",
         url: "https://bestbuy.com"
     },
     {
@@ -33,7 +33,7 @@ const products = [
         category: "desktop",
         description: "Intel Core i3, 8GB RAM, 512GB SSD. Computadora basica ideal para tareas escolares y oficina diaria.",
         price: "$399.99",
-        image: "https://googleusercontent.com",
+        image: "https://imgur.com",
         url: "https://bestbuy.com"
     },
     {
@@ -42,7 +42,7 @@ const products = [
         category: "laptop",
         description: "Intel Celeron, 4GB memory, 64GB eMMC. Laptop ligera optimizada para navegacion web limpia.",
         price: "$299.00",
-        image: "https://googleusercontent.com",
+        image: "https://imgur.com",
         url: "https://bestbuy.com"
     },
     {
@@ -51,7 +51,7 @@ const products = [
         category: "laptop",
         description: "AMD Ryzen 7, 16GB memory, 1TB SSD. Portabilidad maxima con chasis moderno de alta eficiencia.",
         price: "$749.99",
-        image: "https://googleusercontent.com",
+        image: "https://imgur.com",
         url: "https://bestbuy.com"
     },
     {
@@ -60,7 +60,7 @@ const products = [
         category: "mobile",
         description: "5G, 256GB Almacenamiento, Titanium Gray. Dispositivo insignia con funciones avanzadas de IA.",
         price: "$1,299.99",
-        image: "https://googleusercontent.com",
+        image: "https://imgur.com",
         url: "https://bestbuy.com"
     },
     {
@@ -69,7 +69,7 @@ const products = [
         category: "mobile",
         description: "5G, 128GB Almacenamiento, Lápiz Optico Integrado. Pantalla fluida y bateria de larga duracion.",
         price: "$399.99",
-        image: "https://googleusercontent.com",
+        image: "https://imgur.com",
         url: "https://bestbuy.com"
     }
 ];
