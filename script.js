@@ -2,75 +2,75 @@
 const products = [
     {
         id: 1,
-        name: "HP Z2 Mini G9 Workstation",
+        name: "Lenovo ThinkStation P3",
         category: "workstation",
-        description: "Intel Core i7, 32GB RAM, 1TB SSD, NVIDIA RTX A2000. Potencia compacta profesional.",
-        price: "$1,649.99",
-        image: "https://placehold.co",
-        url: "https://bestbuy.com"
+        description: "Intel Core i7, 32GB RAM, 1TB SSD, NVIDIA T1000. Alta capacidad para diseno e ingenieria.",
+        price: "$1,499.99",
+        image: "images/workstation1.jpg",
+        url: "https://newegg.com"
     },
     {
         id: 2,
-        name: "Lenovo ThinkStation P3 Tower",
+        name: "HP Z2 Tower G9",
         category: "workstation",
-        description: "Intel Core i9, 64GB RAM, 2TB SSD, NVIDIA RTX 4000 Ada. Estacion avanzada de arquitectura.",
-        price: "$2,899.99",
-        image: "https://placehold.co",
-        url: "https://bestbuy.com"
+        description: "Intel Xeon W-1250, 64GB ECC RAM, 2TB NVMe SSD. Estabilidad empresarial extrema.",
+        price: "$2,150.00",
+        image: "images/workstation2.jpg",
+        url: "https://newegg.com"
     },
     {
         id: 3,
-        name: "CyberPowerPC Gamer Master",
+        name: "PC Desktop Gamer Advanced",
         category: "desktop",
-        description: "AMD Ryzen 5, 16GB DDR5 memory, 500GB SSD, AMD Radeon RX 6500 XT. Estabilidad grafica basica.",
-        price: "$649.99",
-        image: "https://placehold.co",
-        url: "https://bestbuy.com"
+        description: "AMD Ryzen 5, 16GB DDR4, 500GB SSD, RTX 3060. Optimizada para estaciones de computo estandar.",
+        price: "$899.99",
+        image: "images/desktop1.jpg",
+        url: "https://newegg.com"
     },
     {
         id: 4,
-        name: "HP Desktop Intel Tower",
+        name: "Acer Aspire TC Tower",
         category: "desktop",
-        description: "Intel Core i3, 8GB RAM, 512GB SSD. Computadora basica ideal para tareas escolares y oficina diaria.",
-        price: "$399.99",
-        image: "https://placehold.co",
-        url: "https://bestbuy.com"
+        description: "Intel Core i5, 12GB RAM, 512GB SSD. Computadora de escritorio eficiente para oficina y escuela.",
+        price: "$549.99",
+        image: "images/desktop2.jpg",
+        url: "https://newegg.com"
     },
     {
         id: 5,
-        name: "HP Chromebook 14",
+        name: "MSI Cyborg 15 Laptop",
         category: "laptop",
-        description: "Intel Celeron, 4GB memory, 64GB eMMC. Laptop ligera optimizada para navegacion web limpia.",
-        price: "$299.00",
-        image: "https://placehold.co",
-        url: "https://bestbuy.com"
+        description: "Intel Core i7, RTX 4060, 16GB RAM, 512GB SSD. Rendimiento portatil de ultima generacion.",
+        price: "$1,099.00",
+        image: "https://unsplash.com", // Imagen publica libre de bloques
+        url: "https://newegg.com"
     },
     {
         id: 6,
-        name: "ASUS Vivobook 16 Slim",
+        name: "ASUS Zenbook 14 Slim",
         category: "laptop",
-        description: "AMD Ryzen 7, 16GB memory, 1TB SSD. Portabilidad maxima con chasis moderno de alta eficiencia.",
-        price: "$749.99",
-        image: "https://placehold.co",
-        url: "https://bestbuy.com"
+        description: "AMD Ryzen 7, 16GB RAM, 1TB SSD. Chasis de aluminio ultra liviano con pantalla de alta definicion.",
+        price: "$799.99",
+        image: "https://unsplash.com", // Imagen publica libre de bloques
+        url: "https://newegg.com"
     },
     {
         id: 7,
         name: "Samsung Galaxy S24 Ultra",
         category: "mobile",
-        description: "5G, 256GB Almacenamiento, Titanium Gray. Dispositivo insignia con funciones avanzadas de IA.",
-        price: "$1,299.99",
-        image: "https://placehold.co",
-        url: "https://bestbuy.com"
+        description: "5G, 256GB Almacenamiento, Camara de 200MP, Pantalla Dynamic AMOLED. Rendimiento premium.",
+        price: "$1,199.99",
+        image: "https://unsplash.com", // Imagen publica libre de bloques
+        url: "https://newegg.com"
     },
     {
         id: 8,
-        name: "Motorola Moto G Stylus 2024",
+        name: "Motorola Edge 2024",
         category: "mobile",
-        description: "5G, 128GB Almacenamiento, Lápiz Optico Integrado. Pantalla fluida y bateria de larga duracion.",
-        price: "$399.99",
-        image: "https://placehold.co",
-        url: "https://bestbuy.com"
+        description: "5G, 256GB Almacenamiento, Pantalla Fluida de 144Hz. Dispositivo movil versatil de gama media alta.",
+        price: "$549.99",
+        image: "https://unsplash.com", // Imagen publica libre de bloques
+        url: "https://newegg.com"
     }
 ];
 
