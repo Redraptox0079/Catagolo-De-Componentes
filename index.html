@@ -1,33 +1,39 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    <title>Catalogo Retro Tech</title>
+    <title>CATALOGO DE HARDWARE - RETRO COMPONENTES</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>RETRO-TECH CATALOG // SYSTEM v1.0</h1>
-        <p>Seleccione una categoria para filtrar los componentes disponibles.</p>
-        <nav>
-            <button class="nav-btn active" data-category="all">[ TODOS ]</button>
-            <button class="nav-btn" data-category="workstation">[ WORKSTATIONS ]</button>
-            <button class="nav-btn" data-category="desktop">[ DESKTOPS ]</button>
-            <button class="nav-btn" data-category="laptop">[ LAPTOPS ]</button>
-            <button class="nav-btn" data-category="mobile">[ CELULARES ]</button>
+    <div class="scanlines"></div>
+    <div class="crt-overlay">
+        <header>
+            <h1>=================================</h1>
+            <h1>* RETRO COMPUTER & MOBILE CATALOG *</h1>
+            <h1>=================================</h1>
+            <p>SISTEMA LOGICO DE HARDWARE V2.76 -- SELECCIONE CATEGORIA</p>
+        </header>
+
+        <nav class="categories">
+            <button class="nav-btn active" onclick="filterProducts('all')">[ MOSTRAR TODO ]</button>
+            <button class="nav-btn" onclick="filterProducts('workstation')">[ WORKSTATIONS ]</button>
+            <button class="nav-btn" onclick="filterProducts('desktop')">[ DESKTOPS ]</button>
+            <button class="nav-btn" onclick="filterProducts('laptop')">[ LAPTOPS ]</button>
+            <button class="nav-btn" onclick="filterProducts('mobile')">[ CELULARES ]</button>
         </nav>
-    </header>
 
-    <main class="catalog-grid" id="catalog-grid">
-        <!-- Los elementos se cargan mediante JavaScript -->
-    </main>
+        <main id="catalog-container" class="grid-container">
+            <!-- Los productos se inyectan dinámicamente mediante script.js -->
+        </main>
 
-    <footer>
-        <p>SISTEMA OPERATIVO RETRO-TECH V1.0 // ALMACENADO EN GITHUB</p>
-    </footer>
-
+        <footer>
+            <p>=========================================================</p>
+            <p>FIN DE LA PAGINA -- REPOSITORIO DE CLASE GITHUB -- 2026</p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
