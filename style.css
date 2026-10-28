@@ -16,7 +16,7 @@ body {
     position: relative;
 }
 
-/* Efecto de monitor CRT antiguo con lineas de escaneo */
+/* Efecto CRT optimizado para no bloquear las imagenes */
 .scanlines {
     position: fixed;
     top: 0;
@@ -25,14 +25,16 @@ body {
     height: 100%;
     background: linear-gradient(
         rgba(18, 16, 16, 0) 50%, 
-        rgba(0, 0, 0, 0.25) 50%
+        rgba(0, 0, 0, 0.15) 50%
     );
     background-size: 100% 4px;
-    z-index: 999;
+    z-index: 10;
     pointer-events: none;
 }
 
 .crt-overlay {
+    position: relative;
+    z-index: 1;
     text-shadow: 0 0 4px rgba(51, 255, 51, 0.55);
     max-width: 1200px;
     margin: 0 auto;
@@ -53,7 +55,6 @@ header p {
     font-size: 1rem;
 }
 
-/* Menu de navegacion estilo BBS */
 .categories {
     display: flex;
     justify-content: center;
@@ -84,7 +85,6 @@ header p {
     border: 1px dashed #33ff33;
 }
 
-/* Grid de componentes */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -107,10 +107,11 @@ header p {
     background-color: #11250f;
 }
 
+/* Fondo claro puro para asegurar la visibilidad del inventario de Newegg */
 .image-container {
     width: 100%;
     height: 180px;
-    background-color: #ffffff; /* Cambiado a blanco para que resalten los PNG de los productos */
+    background-color: #ffffff;
     border-bottom: 1px dashed #33ff33;
     margin-bottom: 15px;
     display: flex;
@@ -118,13 +119,15 @@ header p {
     justify-content: center;
     overflow: hidden;
     padding: 10px;
+    position: relative;
+    z-index: 5;
 }
 
-/* Ajuste optimizado para cargar correctamente las fotos */
 .product-image {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    display: block;
 }
 
 .product-info h2 {
@@ -160,6 +163,8 @@ header p {
     text-decoration: none;
     font-weight: bold;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 20;
 }
 
 .buy-btn:hover {
