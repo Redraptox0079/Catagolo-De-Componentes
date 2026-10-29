@@ -1,421 +1,187 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Catálogo retro de computadoras, componentes y dispositivos móviles.">
-
+    <meta name="description" content="BYTE BAZAAR: catálogo retro de computadoras, componentes y dispositivos móviles.">
     <title>BYTE BAZAAR | Catálogo tecnológico</title>
 
-    <link rel="stylesheet" href="styles.css">
-    body {
-        margin: 0;
-        background: #f1efdf;
-        color: #20231d;
-        font-family: Arial, sans-serif;
-    }
-
-    .site-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 5%;
-        background: #20231d;
-        color: #b9f45b;
-    }
-
-    .site-header a {
-        color: #b9f45b;
-    }
-
-    .hero {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 40px;
-        padding: 70px 8%;
-    }
-
-    .hero h1 {
-        font-size: 60px;
-        line-height: 1;
-    }
-
-    .hero h1 span {
-        color: #ff6b45;
-    }
-
-    .hero-art {
-        min-height: 300px;
-        display: grid;
-        place-items: center;
-        background: #e4e1cd;
-        border: 1px solid #c9c6b4;
-    }
-
-    .ticker {
-        padding: 15px;
-        background: #20231d;
-        color: #b9f45b;
-    }
-
-    .catalog-section {
-        padding: 70px 8%;
-    }
-
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 18px;
-    }
-
-    .product-card {
-        overflow: hidden;
-        background: #f8f6e9;
-        border: 1px solid #c9c6b4;
-    }
-
-    .product-image-wrap {
-        height: 190px;
-        padding: 15px;
-        background: #e7e4d4;
-    }
-
-    .product-image-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .product-info {
-        padding: 15px;
-    }
-
-    .product-link {
-        display: inline-block;
-        padding: 10px;
-        background: #20231d;
-        color: #f1efdf;
-        text-decoration: none;
-    }
-
-    .about-section {
-        padding: 50px 8%;
-        background: #b9f45b;
-    }
-
-    @media (max-width: 700px) {
-        .hero {
-            grid-template-columns: 1fr;
-        }
-
-        .product-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
-
-    @media (max-width: 450px) {
-        .product-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-<style>
-    body { background: #f1efdf !important; }
-</style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
     <div class="scanlines" aria-hidden="true"></div>
 
-    <!-- ENCABEZADO -->
     <header class="site-header">
-
-        <a class="brand" href="#" aria-label="BYTE BAZAAR Inicio">
-            <span class="brand-mark">BB</span>
-
-            <span>
-                <strong>BYTE BAZAAR</strong>
-                <small>TECH CATALOG / EST. 1987</small>
-            </span>
+        <a class="logo" href="#" aria-label="BYTE BAZAAR inicio">
+            <span class="logo-icon">▣</span>
+            BYTE BAZAAR<span class="logo-cursor">_</span>
         </a>
 
-        <nav aria-label="Navegación principal">
+        <nav class="main-nav">
             <a href="#catalogo">CATÁLOGO</a>
-            <a href="#acerca">ACERCA</a>
-            <a href="#footer">CONTACTO</a>
+            <a href="#nosotros">SOBRE NOSOTROS</a>
         </nav>
 
-        <div class="header-status">
-            <span class="status-dot"></span>
-            SISTEMA EN LÍNEA
+        <div class="system-status">
+            <span class="status-light"></span>
+            SISTEMA ACTIVO
         </div>
-
     </header>
 
     <main>
-
-        <!-- PORTADA -->
         <section class="hero">
-
-            <div class="hero-copy">
-
-                <p class="eyebrow">
-                    HARDWARE / COMPONENTES / DISPOSITIVOS
+            <div class="hero-content">
+                <p class="eyebrow">/// TERMINAL DE INVENTARIO v1.0</p>
+                <h1>EL FUTURO<br>ES <span>RETRO.</span></h1>
+                <p class="hero-description">
+                    Tu próxima actualización tecnológica comienza aquí.
+                    Explora computadoras, componentes y dispositivos.
                 </p>
+                <a class="hero-button" href="#catalogo">[ EXPLORAR CATÁLOGO ]</a>
 
-                <h1>
-                    TECNOLOGÍA<br>
-                    <span>EN PRIMER PLANO.</span>
-                </h1>
-
-                <p class="hero-text">
-                    Un catálogo de computadoras de escritorio, laptops,
-                    estaciones de trabajo, componentes de PC y celulares.
-                    Explora equipos y compara precios de referencia.
-                </p>
-
-                <a class="button button-primary" href="#catalogo">
-                    EXPLORAR CATÁLOGO
-                    <span aria-hidden="true">&rarr;</span>
-                </a>
-
-                <p class="small-note">
-                    PROYECTO ACADÉMICO / PRECIOS ILUSTRATIVOS EN USD
-                </p>
-
+                <div class="hero-stats">
+                    <div>
+                        <strong>01</strong>
+                        <span>TECNOLOGÍA</span>
+                    </div>
+                    <div>
+                        <strong>100%</strong>
+                        <span>SEÑAL ACTIVA</span>
+                    </div>
+                    <div>
+                        <strong>∞</strong>
+                        <span>POSIBILIDADES</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- ILUSTRACIÓN RETRO CREADA CON CSS -->
-            <div class="hero-art" aria-label="Ilustración de una computadora retro">
+            <div class="hero-art" aria-label="Ilustración retro de una terminal">
+                <div class="terminal">
+                    <div class="terminal-top">
+                        <span>BYTE-OS v1.0</span>
+                        <span>● ● ●</span>
+                    </div>
+                    <div class="terminal-screen">
+                        <pre>
+  ____  __   __ _____
+ | __ ) \ \ / /| ____|
+ |  _ \  \ V / |  _|
+ | |_) |  | |  | |___
+ |____/   |_|  |_____|
 
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-
-                <div class="retro-computer">
-
-                    <div class="monitor">
-
-                        <div class="screen">
-
-                            <div class="screen-top">
-                                <span>BYTE_OS v1.9</span>
-                                <span>REC</span>
-                            </div>
-
-                            <div class="screen-glyph">&gt;_</div>
-
-                            <div class="screen-bars">
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </div>
-
+ SYSTEM READY_
+                        </pre>
+                        <div class="terminal-progress">
+                            <span></span>
                         </div>
-
-                        <div class="monitor-lip"></div>
-
+                        <p>INITIALIZING INVENTORY...</p>
+                        <p class="terminal-ok">[ OK ] CONNECTION ESTABLISHED</p>
+                        <p class="terminal-blink">▋</p>
                     </div>
-
-                    <div class="computer-base">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <b></b>
+                    <div class="terminal-controls">
+                        <span></span><span></span><span></span>
+                        <div class="terminal-slot"></div>
                     </div>
-
+                    <div class="terminal-base"></div>
                 </div>
-
-                <div class="art-label label-top">
-                    FIG. 01 / HARDWARE
-                </div>
-
-                <div class="art-label label-bottom">
-                    BUILT FOR THE FUTURE
-                </div>
-
+                <div class="art-label">FIG. 001 — PERSONAL COMPUTER</div>
             </div>
-
         </section>
 
-        <!-- BANDA DECORATIVA -->
-        <section class="ticker" aria-label="Especialidades">
-
-            <div>
-                HARDWARE DE ALTO RENDIMIENTO
-                <span>///</span>
-                COMPUTACIÓN PERSONAL
-                <span>///</span>
-                MOVILIDAD DIGITAL
-                <span>///</span>
-                COMPONENTES DE PC
-                <span>///</span>
-                HARDWARE DE ALTO RENDIMIENTO
-                <span>///</span>
-                COMPUTACIÓN PERSONAL
-                <span>///</span>
+        <div class="ticker" aria-label="Anuncio">
+            <div class="ticker-track">
+                <span>◆ BYTE BAZAAR</span>
+                <span>◆ TECNOLOGÍA PARA EL FUTURO</span>
+                <span>◆ SISTEMA EN LÍNEA</span>
+                <span>◆ BYTE BAZAAR</span>
+                <span>◆ TECNOLOGÍA PARA EL FUTURO</span>
+                <span>◆ SISTEMA EN LÍNEA</span>
             </div>
+        </div>
 
-        </section>
-
-        <!-- CATÁLOGO -->
         <section class="catalog-section" id="catalogo">
-
             <div class="section-heading">
-
                 <div>
-                    <p class="eyebrow">ARCHIVO 001 / INVENTARIO</p>
-
-                    <h2>
-                        Explora el inventario<span class="accent">.</span>
-                    </h2>
+                    <p class="eyebrow">/// BASE DE DATOS 001</p>
+                    <h2>CATÁLOGO<span class="heading-dot">.</span></h2>
+                    <p class="section-description">Encuentra el hardware que necesitas.</p>
                 </div>
 
-                <p class="section-description">
-                    Busca por nombre, filtra por categoría y ordena
-                    los productos según su precio.
-                </p>
-
+                <div class="catalog-counter">
+                    <span class="status-light"></span>
+                    <span id="resultCount">CARGANDO INVENTARIO...</span>
+                </div>
             </div>
 
-            <!-- BUSCADOR Y FILTROS -->
             <div class="catalog-tools">
-
                 <label class="search-box">
-
-                    <span class="search-icon" aria-hidden="true">&gt;</span>
-
-                    <input
-                        type="search"
-                        id="searchInput"
-                        placeholder="Buscar producto..."
-                        aria-label="Buscar producto"
-                    >
-
+                    <span aria-hidden="true">&gt;_</span>
+                    <input type="search" id="searchInput" placeholder="Buscar producto..." aria-label="Buscar producto">
                 </label>
 
-                <label class="select-wrap">
-
-                    <span class="sr-only">Filtrar por categoría</span>
-
-                    <select id="categoryFilter">
-
-                        <option value="all">Todas las categorías</option>
-                        <option value="workstation">Workstation</option>
-                        <option value="desktop">Desktop</option>
-                        <option value="laptop">Laptop</option>
-                        <option value="mobile">Celulares</option>
-                        <option value="component">Componentes</option>
-
+                <label class="select-box">
+                    <span>CATEGORÍA:</span>
+                    <select id="categoryFilter" aria-label="Filtrar por categoría">
+                        <option value="all">TODAS</option>
+                        <option value="workstation">WORKSTATION</option>
+                        <option value="desktop">DESKTOP</option>
+                        <option value="laptop">LAPTOP</option>
+                        <option value="mobile">MÓVILES</option>
+                        <option value="components">COMPONENTES</option>
                     </select>
-
                 </label>
 
-                <label class="select-wrap">
-
-                    <span class="sr-only">Ordenar productos</span>
-
-                    <select id="sortFilter">
-
-                        <option value="featured">Orden: destacados</option>
-                        <option value="low">Precio: menor a mayor</option>
-                        <option value="high">Precio: mayor a menor</option>
-                        <option value="name">Nombre: A-Z</option>
-
+                <label class="select-box">
+                    <span>ORDENAR:</span>
+                    <select id="sortFilter" aria-label="Ordenar productos">
+                        <option value="default">DESTACADOS</option>
+                        <option value="price-asc">PRECIO: MENOR A MAYOR</option>
+                        <option value="price-desc">PRECIO: MAYOR A MENOR</option>
+                        <option value="name-asc">NOMBRE: A-Z</option>
                     </select>
-
                 </label>
-
             </div>
 
-            <!-- INFORMACIÓN DE RESULTADOS -->
-            <div class="results-line">
+            <div class="product-grid" id="productGrid"></div>
 
-                <span id="resultCount">00 PRODUCTOS</span>
-
-                <span>MONEDA: USD / DEMO</span>
-
+            <div class="empty-state" id="emptyState" hidden>
+                <span class="empty-icon">[ ! ]</span>
+                <h3>NO SE ENCONTRARON RESULTADOS</h3>
+                <p>Intenta cambiar los filtros de búsqueda.</p>
+                <button type="button" id="resetFilters">[ REINICIAR FILTROS ]</button>
             </div>
-
-            <!-- JAVASCRIPT INSERTARÁ AQUÍ LOS PRODUCTOS -->
-            <div
-                id="productGrid"
-                class="product-grid"
-                aria-live="polite"
-            ></div>
-
-            <!-- MENSAJE SI NO HAY RESULTADOS -->
-            <div id="emptyState" class="empty-state" hidden>
-
-                <h3>Sin resultados</h3>
-
-                <p>
-                    Prueba con otro término de búsqueda o selecciona
-                    una categoría diferente.
-                </p>
-
-            </div>
-
         </section>
 
-        <!-- INFORMACIÓN DEL PROYECTO -->
-        <section class="about-section" id="acerca">
-
-            <div class="about-number">01—03</div>
-
+        <section class="about-section" id="nosotros">
+            <div class="about-symbol">[ BB ]</div>
             <div>
-
-                <p class="eyebrow">NOTA DEL PROYECTO</p>
-
-                <h2>
-                    Un catálogo claro.<br>
-                    Una estética de otra época.
-                </h2>
-
+                <p class="eyebrow">/// ACERCA DEL PROYECTO</p>
+                <h2>TECNOLOGÍA.<br><span>ESTILO RETRO.</span></h2>
+                <p>
+                    BYTE BAZAAR es un catálogo tecnológico con una estética inspirada
+                    en las terminales de computadora clásicas. Explora diferentes
+                    categorías de productos desde una interfaz sencilla y retro.
+                </p>
             </div>
-
-            <p>
-                BYTE BAZAAR es una maqueta educativa de catálogo
-                tecnológico. Los precios son estimados para demostración
-                y no representan ofertas actuales. Los enlaces de los
-                productos permiten consultar artículos relacionados
-                en Newegg.
-            </p>
-
+            <div class="about-side">
+                <span>STATUS: ONLINE</span>
+                <span>MODE: EXPLORATION</span>
+                <span>END OF TRANSMISSION_</span>
+            </div>
         </section>
-
     </main>
 
-    <!-- PIE DE PÁGINA -->
-    <footer id="footer">
-
-        <a class="brand footer-brand" href="#">
-
-            <span class="brand-mark">BB</span>
-
-            <span>
-                <strong>BYTE BAZAAR</strong>
-                <small>TECH CATALOG / EST. 1987</small>
-            </span>
-
-        </a>
-
-        <p>PROYECTO DE CLASE / NO ES UNA TIENDA REAL</p>
-
-        <p>
-            &copy; <span id="year"></span> BYTE BAZAAR
-        </p>
-
+    <footer>
+        <a class="footer-logo" href="#">BYTE BAZAAR<span>_</span></a>
+        <p>UN CATÁLOGO PARA LOS AMANTES DE LA TECNOLOGÍA.</p>
+        <p>© <span id="year"></span> BYTE BAZAAR // TODOS LOS SISTEMAS OPERATIVOS</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
