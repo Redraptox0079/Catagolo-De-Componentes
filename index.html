@@ -9,6 +9,119 @@
     <title>BYTE BAZAAR | Catálogo tecnológico</title>
 
     <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+        margin: 0;
+        background: #f1efdf;
+        color: #20231d;
+        font-family: Arial, sans-serif;
+    }
+
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 5%;
+        background: #20231d;
+        color: #b9f45b;
+    }
+
+    .site-header a {
+        color: #b9f45b;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+        padding: 70px 8%;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        line-height: 1;
+    }
+
+    .hero h1 span {
+        color: #ff6b45;
+    }
+
+    .hero-art {
+        min-height: 300px;
+        display: grid;
+        place-items: center;
+        background: #e4e1cd;
+        border: 1px solid #c9c6b4;
+    }
+
+    .ticker {
+        padding: 15px;
+        background: #20231d;
+        color: #b9f45b;
+    }
+
+    .catalog-section {
+        padding: 70px 8%;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .product-card {
+        overflow: hidden;
+        background: #f8f6e9;
+        border: 1px solid #c9c6b4;
+    }
+
+    .product-image-wrap {
+        height: 190px;
+        padding: 15px;
+        background: #e7e4d4;
+    }
+
+    .product-image-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .product-info {
+        padding: 15px;
+    }
+
+    .product-link {
+        display: inline-block;
+        padding: 10px;
+        background: #20231d;
+        color: #f1efdf;
+        text-decoration: none;
+    }
+
+    .about-section {
+        padding: 50px 8%;
+        background: #b9f45b;
+    }
+
+    @media (max-width: 700px) {
+        .hero {
+            grid-template-columns: 1fr;
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 450px) {
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
 <style>
     body { background: #f1efdf !important; }
 </style>
