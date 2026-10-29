@@ -1,39 +1,307 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CATALOGO DE HARDWARE - RETRO COMPONENTES</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="scanlines"></div>
-    <div class="crt-overlay">
-        <header>
-            <h1>=================================</h1>
-            <h1>* RETRO COMPUTER & MOBILE CATALOG *</h1>
-            <h1>=================================</h1>
-            <p>SISTEMA LOGICO DE HARDWARE V7.50 -- DATA DE BEST BUY ACTIVADA</p>
-        </header>
 
-        <nav class="categories">
-            <button class="nav-btn active" onclick="filterProducts('all')">[ MOSTRAR TODO ]</button>
-            <button class="nav-btn" onclick="filterProducts('workstation')">[ WORKSTATIONS ]</button>
-            <button class="nav-btn" onclick="filterProducts('desktop')">[ DESKTOPS ]</button>
-            <button class="nav-btn" onclick="filterProducts('laptop')">[ LAPTOPS ]</button>
-            <button class="nav-btn" onclick="filterProducts('mobile')">[ CELULARES ]</button>
+    <meta name="description" content="Catálogo retro de computadoras, componentes y dispositivos móviles.">
+
+    <title>BYTE BAZAAR | Catálogo tecnológico</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- ENCABEZADO -->
+    <header class="site-header">
+
+        <a class="brand" href="#" aria-label="BYTE BAZAAR Inicio">
+            <span class="brand-mark">BB</span>
+
+            <span>
+                <strong>BYTE BAZAAR</strong>
+                <small>TECH CATALOG / EST. 1987</small>
+            </span>
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <a href="#catalogo">CATÁLOGO</a>
+            <a href="#acerca">ACERCA</a>
+            <a href="#footer">CONTACTO</a>
         </nav>
 
-        <main id="catalog-container" class="grid-container">
-            <!-- Inyeccion dinamica controlada -->
-        </main>
+        <div class="header-status">
+            <span class="status-dot"></span>
+            SISTEMA EN LÍNEA
+        </div>
 
-        <footer>
-            <p>=========================================================</p>
-            <p>FIN DE LA PAGINA -- REPOSITORIO DE CLASE GITHUB -- 2026</p>
-        </footer>
-    </div>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="hero">
+
+            <div class="hero-copy">
+
+                <p class="eyebrow">
+                    HARDWARE / COMPONENTES / DISPOSITIVOS
+                </p>
+
+                <h1>
+                    TECNOLOGÍA<br>
+                    <span>EN PRIMER PLANO.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Un catálogo de computadoras de escritorio, laptops,
+                    estaciones de trabajo, componentes de PC y celulares.
+                    Explora equipos y compara precios de referencia.
+                </p>
+
+                <a class="button button-primary" href="#catalogo">
+                    EXPLORAR CATÁLOGO
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+
+                <p class="small-note">
+                    PROYECTO ACADÉMICO / PRECIOS ILUSTRATIVOS EN USD
+                </p>
+
+            </div>
+
+            <!-- ILUSTRACIÓN RETRO CREADA CON CSS -->
+            <div class="hero-art" aria-label="Ilustración de una computadora retro">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="retro-computer">
+
+                    <div class="monitor">
+
+                        <div class="screen">
+
+                            <div class="screen-top">
+                                <span>BYTE_OS v1.9</span>
+                                <span>REC</span>
+                            </div>
+
+                            <div class="screen-glyph">&gt;_</div>
+
+                            <div class="screen-bars">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                        </div>
+
+                        <div class="monitor-lip"></div>
+
+                    </div>
+
+                    <div class="computer-base">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <b></b>
+                    </div>
+
+                </div>
+
+                <div class="art-label label-top">
+                    FIG. 01 / HARDWARE
+                </div>
+
+                <div class="art-label label-bottom">
+                    BUILT FOR THE FUTURE
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BANDA DECORATIVA -->
+        <section class="ticker" aria-label="Especialidades">
+
+            <div>
+                HARDWARE DE ALTO RENDIMIENTO
+                <span>///</span>
+                COMPUTACIÓN PERSONAL
+                <span>///</span>
+                MOVILIDAD DIGITAL
+                <span>///</span>
+                COMPONENTES DE PC
+                <span>///</span>
+                HARDWARE DE ALTO RENDIMIENTO
+                <span>///</span>
+                COMPUTACIÓN PERSONAL
+                <span>///</span>
+            </div>
+
+        </section>
+
+        <!-- CATÁLOGO -->
+        <section class="catalog-section" id="catalogo">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">ARCHIVO 001 / INVENTARIO</p>
+
+                    <h2>
+                        Explora el inventario<span class="accent">.</span>
+                    </h2>
+                </div>
+
+                <p class="section-description">
+                    Busca por nombre, filtra por categoría y ordena
+                    los productos según su precio.
+                </p>
+
+            </div>
+
+            <!-- BUSCADOR Y FILTROS -->
+            <div class="catalog-tools">
+
+                <label class="search-box">
+
+                    <span class="search-icon" aria-hidden="true">&gt;</span>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Buscar producto..."
+                        aria-label="Buscar producto"
+                    >
+
+                </label>
+
+                <label class="select-wrap">
+
+                    <span class="sr-only">Filtrar por categoría</span>
+
+                    <select id="categoryFilter">
+
+                        <option value="all">Todas las categorías</option>
+                        <option value="workstation">Workstation</option>
+                        <option value="desktop">Desktop</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="mobile">Celulares</option>
+                        <option value="component">Componentes</option>
+
+                    </select>
+
+                </label>
+
+                <label class="select-wrap">
+
+                    <span class="sr-only">Ordenar productos</span>
+
+                    <select id="sortFilter">
+
+                        <option value="featured">Orden: destacados</option>
+                        <option value="low">Precio: menor a mayor</option>
+                        <option value="high">Precio: mayor a menor</option>
+                        <option value="name">Nombre: A-Z</option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+            <!-- INFORMACIÓN DE RESULTADOS -->
+            <div class="results-line">
+
+                <span id="resultCount">00 PRODUCTOS</span>
+
+                <span>MONEDA: USD / DEMO</span>
+
+            </div>
+
+            <!-- JAVASCRIPT INSERTARÁ AQUÍ LOS PRODUCTOS -->
+            <div
+                id="productGrid"
+                class="product-grid"
+                aria-live="polite"
+            ></div>
+
+            <!-- MENSAJE SI NO HAY RESULTADOS -->
+            <div id="emptyState" class="empty-state" hidden>
+
+                <h3>Sin resultados</h3>
+
+                <p>
+                    Prueba con otro término de búsqueda o selecciona
+                    una categoría diferente.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- INFORMACIÓN DEL PROYECTO -->
+        <section class="about-section" id="acerca">
+
+            <div class="about-number">01—03</div>
+
+            <div>
+
+                <p class="eyebrow">NOTA DEL PROYECTO</p>
+
+                <h2>
+                    Un catálogo claro.<br>
+                    Una estética de otra época.
+                </h2>
+
+            </div>
+
+            <p>
+                BYTE BAZAAR es una maqueta educativa de catálogo
+                tecnológico. Los precios son estimados para demostración
+                y no representan ofertas actuales. Los enlaces de los
+                productos permiten consultar artículos relacionados
+                en Newegg.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="footer">
+
+        <a class="brand footer-brand" href="#">
+
+            <span class="brand-mark">BB</span>
+
+            <span>
+                <strong>BYTE BAZAAR</strong>
+                <small>TECH CATALOG / EST. 1987</small>
+            </span>
+
+        </a>
+
+        <p>PROYECTO DE CLASE / NO ES UNA TIENDA REAL</p>
+
+        <p>
+            &copy; <span id="year"></span> BYTE BAZAAR
+        </p>
+
+    </footer>
+
     <script src="script.js"></script>
+
 </body>
 </html>
