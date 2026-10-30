@@ -835,3 +835,45 @@ footer p {
 .product-specifications strong {
     color: #e4ffe0;
 }
+/* SOLUCIÓN: EVITAR QUE LAS TARJETAS LATERALES SE ESTIREN */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 20px;
+}
+
+.product-card {
+    align-self: start;
+    height: auto;
+    min-width: 0;
+}
+
+/* Permitir que cada tarjeta crezca independientemente */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 350px;
+}
+
+/* Las especificaciones solo ocupan espacio al abrirse */
+.product-specifications {
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+/* Adaptación a pantallas medianas */
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
