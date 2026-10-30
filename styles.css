@@ -877,3 +877,68 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================================================
+   ESTILOS RETRO PARA FILTROS (BUSCADOR, CATEGORÍA Y ORDENAR)
+   ========================================================================== */
+
+/* Contenedor general de las herramientas de filtrado */
+.catalog-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+/* Estilo para las etiquetas de texto de los filtros */
+.catalog-tools label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Forzar color verde brillante a los textos fijos como "CATEGORÍA:" */
+.catalog-tools label span {
+    color: var(--green);
+}
+
+/* Estilo unificado para el buscador de texto y las cajas de selección */
+.catalog-tools input[type="search"],
+.catalog-tools select {
+    background-color: var(--panel) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--green-bright) !important;
+    font-family: var(--font);
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* Efecto de foco cuando haces clic sobre ellos */
+.catalog-tools input[type="search"]:focus,
+.catalog-tools select:focus {
+    border-color: var(--green) !important;
+    box-shadow: 0 0 10px rgba(140, 255, 155, 0.2);
+}
+
+/* Estilizar las opciones internas de la lista desplegable */
+.catalog-tools select option {
+    background-color: var(--panel) !important;
+    color: var(--text) !important;
+}
+
+/* Corregir apariencia nativa de la flecha en sistemas operativos */
+.catalog-tools select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238cff9b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 14px;
+}
