@@ -4,9 +4,9 @@
 // Proyecto académico
 // =========================================
 
-// Los precios son ilustrativos y están expresados en USD.
-// Los enlaces de Newegg permiten buscar productos similares.
-// Las imágenes externas pueden cambiar o dejar de funcionar.
+// Los precios son estimados y están expresados en USD.
+// Las especificaciones deben verificarse antes de comprar.
+// Las búsquedas de Newegg permiten encontrar productos similares.
 
 const products = [
     {
@@ -14,10 +14,18 @@ const products = [
         name: "Workstation Creator Pro",
         category: "workstation",
         label: "Estación de trabajo",
+        brand: "Varias marcas",
         price: 2499.99,
         featured: true,
         search: "workstation desktop computer",
-        image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg"
+        description: "Computadora de alto rendimiento para creación de contenido, diseño y trabajo profesional.",
+        specifications: {
+            "Categoría": "Estación de trabajo",
+            "Uso": "Diseño y productividad",
+            "Precio": "Estimado en USD"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -25,10 +33,18 @@ const products = [
         name: "Desktop Gaming Tower",
         category: "desktop",
         label: "Desktop",
+        brand: "Varias marcas",
         price: 1399.99,
         featured: true,
         search: "gaming desktop computer tower",
-        image: "https://c1.neweggimages.com/productimage/nb640/83-360-491-01.jpg"
+        description: "Computadora de escritorio orientada a videojuegos y aplicaciones exigentes.",
+        specifications: {
+            "Categoría": "PC de escritorio",
+            "Uso": "Gaming",
+            "Formato": "Torre"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/83-360-491-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -36,10 +52,18 @@ const products = [
         name: "Laptop Performance 16",
         category: "laptop",
         label: "Laptop",
+        brand: "Varias marcas",
         price: 1199.99,
         featured: true,
         search: "16 inch performance laptop",
-        image: "https://c1.neweggimages.com/productimage/nb640/34-156-634-01.jpg"
+        description: "Laptop de alto rendimiento para productividad, entretenimiento y multitarea.",
+        specifications: {
+            "Categoría": "Laptop",
+            "Tamaño anunciado": "16 pulgadas",
+            "Uso": "Productividad y entretenimiento"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/34-156-634-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -47,10 +71,18 @@ const products = [
         name: "Smartphone Nova X",
         category: "mobile",
         label: "Celular",
+        brand: "Varias marcas",
         price: 799.99,
         featured: false,
         search: "unlocked android smartphone",
-        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg"
+        description: "Teléfono inteligente para comunicación, aplicaciones, fotografía y entretenimiento.",
+        specifications: {
+            "Categoría": "Smartphone",
+            "Sistema": "Android, según modelo",
+            "Conectividad": "Móvil e inalámbrica"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -58,10 +90,18 @@ const products = [
         name: "Tarjeta gráfica RTX",
         category: "component",
         label: "GPU",
+        brand: "NVIDIA y fabricantes asociados",
         price: 649.99,
         featured: true,
         search: "NVIDIA GeForce RTX graphics card",
-        image: "https://c1.neweggimages.com/productimage/nb640/14-137-784-01.jpg"
+        description: "Tarjeta gráfica dedicada para videojuegos, creación de contenido y procesamiento visual.",
+        specifications: {
+            "Categoría": "Tarjeta gráfica",
+            "Familia": "NVIDIA GeForce RTX",
+            "Interfaz habitual": "PCI Express"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/14-137-784-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -69,10 +109,19 @@ const products = [
         name: "Procesador de 8 núcleos",
         category: "component",
         label: "CPU",
+        brand: "AMD",
         price: 329.99,
         featured: false,
         search: "AMD Ryzen 7 processor",
-        image: "https://c1.neweggimages.com/productimage/nb640/19-113-777-01.jpg"
+        description: "Procesador de la familia Ryzen 7 para equipos de escritorio y tareas exigentes. Comprueba el modelo exacto antes de comprar.",
+        specifications: {
+            "Fabricante buscado": "AMD",
+            "Familia buscada": "Ryzen 7",
+            "Uso": "Gaming y productividad",
+            "Importante": "Verificar modelo y número de núcleos"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/19-113-777-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -80,10 +129,19 @@ const products = [
         name: "Memoria RAM 32 GB",
         category: "component",
         label: "Memoria",
+        brand: "Varias marcas",
         price: 99.99,
         featured: false,
         search: "32GB DDR5 desktop memory kit",
-        image: "https://c1.neweggimages.com/productimage/nb640/20-236-781-01.jpg"
+        description: "Memoria para mejorar la capacidad de multitarea de una computadora compatible.",
+        specifications: {
+            "Capacidad anunciada": "32 GB",
+            "Tipo buscado": "DDR5",
+            "Formato buscado": "Memoria de escritorio",
+            "Importante": "Verificar compatibilidad con la placa base"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/20-236-781-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -91,10 +149,19 @@ const products = [
         name: "SSD NVMe 2 TB",
         category: "component",
         label: "Almacenamiento",
+        brand: "Varias marcas",
         price: 149.99,
         featured: false,
         search: "2TB NVMe SSD",
-        image: "https://c1.neweggimages.com/productimage/nb640/20-156-635-01.jpg"
+        description: "Unidad de almacenamiento de estado sólido para guardar archivos, aplicaciones y juegos.",
+        specifications: {
+            "Capacidad anunciada": "2 TB",
+            "Tipo buscado": "SSD NVMe",
+            "Uso": "Almacenamiento",
+            "Importante": "Verificar interfaz y compatibilidad"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/20-156-635-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -102,10 +169,18 @@ const products = [
         name: "Laptop Ultraligera 14",
         category: "laptop",
         label: "Laptop",
+        brand: "Varias marcas",
         price: 899.99,
         featured: false,
         search: "14 inch ultrabook laptop",
-        image: "https://c1.neweggimages.com/productimage/nb640/34-156-634-01.jpg"
+        description: "Laptop compacta pensada para estudiar, trabajar y transportar fácilmente.",
+        specifications: {
+            "Categoría": "Laptop",
+            "Tamaño anunciado": "14 pulgadas",
+            "Uso": "Estudio y productividad"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/34-156-634-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -113,10 +188,18 @@ const products = [
         name: "Smartphone Compact",
         category: "mobile",
         label: "Celular",
+        brand: "Varias marcas",
         price: 499.99,
         featured: false,
         search: "unlocked compact smartphone",
-        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg"
+        description: "Teléfono inteligente de formato compacto para las tareas cotidianas.",
+        specifications: {
+            "Categoría": "Smartphone",
+            "Formato": "Compacto",
+            "Uso": "Comunicación y aplicaciones"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -124,10 +207,18 @@ const products = [
         name: "Desktop Oficina",
         category: "desktop",
         label: "Desktop",
+        brand: "Varias marcas",
         price: 599.99,
         featured: false,
         search: "business desktop PC",
-        image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg"
+        description: "Computadora de escritorio para tareas de oficina, navegación y productividad.",
+        specifications: {
+            "Categoría": "PC de escritorio",
+            "Uso": "Oficina y estudio",
+            "Formato": "Equipo de escritorio"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg",
+        productUrl: ""
     },
 
     {
@@ -135,16 +226,24 @@ const products = [
         name: "Fuente de poder 850 W",
         category: "component",
         label: "Energía",
+        brand: "Varias marcas",
         price: 129.99,
         featured: false,
         search: "850W 80 plus gold power supply",
-        image: "https://c1.neweggimages.com/productimage/nb640/17-139-287-01.jpg"
+        description: "Fuente de alimentación para suministrar energía a los componentes de una computadora.",
+        specifications: {
+            "Potencia anunciada": "850 W",
+            "Certificación buscada": "80 PLUS Gold",
+            "Importante": "Verificar modelo, conectores y certificación"
+        },
+        image: "https://c1.neweggimages.com/productimage/nb640/17-139-287-01.jpg",
+        productUrl: ""
     }
 ];
 
 
 // =========================================
-// NOMBRES DE LAS CATEGORÍAS
+// CATEGORÍAS
 // =========================================
 
 const categoryNames = {
@@ -166,6 +265,8 @@ const categoryFilter = document.querySelector("#categoryFilter");
 const sortFilter = document.querySelector("#sortFilter");
 const resultCount = document.querySelector("#resultCount");
 const emptyState = document.querySelector("#emptyState");
+const resetFilters = document.querySelector("#resetFilters");
+const yearElement = document.querySelector("#year");
 
 
 // =========================================
@@ -181,71 +282,66 @@ function formatPrice(price) {
 
 
 // =========================================
-// IMAGEN DE RESPALDO
+// IMÁGENES DE RESPALDO
 // =========================================
 
-// Si una imagen de Newegg no carga, se crea una ilustración
-// SVG localmente mediante JavaScript.
-
 function createFallbackImage(name, category) {
-    const icons = {
+    const drawings = {
         workstation: `
-            <rect x="105" y="65" width="170" height="115" rx="5"/>
-            <rect x="118" y="78" width="144" height="88"/>
-            <path d="M175 180v25h30v-25 M155 210h70"/>
-            <path d="M130 100h120 M130 115h80 M130 130h100"/>
+            <rect x="80" y="45" width="220" height="125" rx="5"/>
+            <rect x="95" y="60" width="190" height="95"/>
+            <path d="M170 170v30h40v-30 M140 205h100"/>
+            <path d="M115 85h150 M115 100h110 M115 115h130"/>
         `,
+
         desktop: `
-            <rect x="145" y="45" width="100" height="160" rx="5"/>
-            <rect x="155" y="55" width="80" height="140"/>
-            <circle cx="195" cy="85" r="17"/>
-            <circle cx="195" cy="135" r="17"/>
-            <path d="M195 65v40 M175 85h40 M195 115v40 M175 135h40"/>
-            <circle cx="225" cy="175" r="4"/>
+            <rect x="125" y="35" width="130" height="170" rx="5"/>
+            <rect x="140" y="50" width="100" height="140"/>
+            <circle cx="190" cy="85" r="22"/>
+            <circle cx="190" cy="140" r="22"/>
+            <circle cx="190" cy="85" r="8"/>
+            <circle cx="190" cy="140" r="8"/>
         `,
+
         laptop: `
-            <path d="M110 75 Q110 65 122 65 H258 Q270 65 270 75 V165 H110 Z"/>
-            <rect x="120" y="75" width="140" height="80"/>
-            <path d="M110 165 L85 195 Q82 202 95 202 H285 Q298 202 295 195 L270 165 Z"/>
-            <path d="M155 180h70"/>
+            <path d="M105 55h170v115H105z"/>
+            <rect x="118" y="68" width="144" height="88"/>
+            <path d="M105 170L80 195h220l-25-25z"/>
+            <path d="M155 181h70"/>
         `,
+
         mobile: `
-            <rect x="145" y="35" width="90" height="175" rx="12"/>
-            <rect x="153" y="52" width="74" height="137" rx="3"/>
-            <circle cx="190" cy="198" r="4"/>
-            <path d="M177 44h26"/>
+            <rect x="145" y="25" width="90" height="190" rx="12"/>
+            <rect x="153" y="43" width="74" height="150" rx="4"/>
+            <circle cx="190" cy="203" r="4"/>
+            <path d="M177 34h26"/>
         `,
+
         component: `
-            <rect x="100" y="65" width="180" height="120" rx="4"/>
-            <rect x="135" y="90" width="110" height="70"/>
-            <rect x="150" y="105" width="80" height="40"/>
-            <path d="M100 80h-20v20h20 M280 80h20v20h-20"/>
-            <path d="M120 185v18 M145 185v18 M170 185v18 M195 185v18 M220 185v18 M245 185v18 M270 185v18"/>
+            <rect x="90" y="45" width="200" height="145" rx="4"/>
+            <rect x="130" y="75" width="120" height="85"/>
+            <rect x="145" y="90" width="90" height="55"/>
+            <path d="M105 190v18 M130 190v18 M155 190v18 M180 190v18 M205 190v18 M230 190v18 M255 190v18 M280 190v18"/>
+            <path d="M90 65h-15v25h15 M290 65h15v25h-15"/>
         `
     };
 
-    const drawings = icons[category] || icons.component;
+    const drawing = drawings[category] || drawings.component;
 
     const safeName = String(name)
         .replace(/[&<>"']/g, "")
-        .slice(0, 32);
+        .slice(0, 30);
 
     const svg = `
         <svg xmlns="http://www.w3.org/2000/svg"
-             width="380" height="250"
+             width="380"
+             height="250"
              viewBox="0 0 380 250">
 
-            <defs>
-                <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#e8e6d9"/>
-                    <stop offset="100%" stop-color="#c9c9b9"/>
-                </linearGradient>
-            </defs>
+            <rect width="380" height="250" fill="#e7e4d4"/>
 
-            <rect width="380" height="250" fill="url(#background)"/>
-
-            <g stroke="#33ff33" stroke-width="1" opacity="0.35">
-                ${Array.from({length: 13}, (_, i) =>
+            <g stroke="#33ff33" stroke-width="1" opacity="0.2">
+                ${Array.from({ length: 13 }, (_, i) =>
                     `<path d="M0 ${i * 20} H380"/>`
                 ).join("")}
             </g>
@@ -255,23 +351,47 @@ function createFallbackImage(name, category) {
                stroke-width="4"
                stroke-linejoin="round"
                stroke-linecap="round">
-                ${drawings}
+                ${drawing}
             </g>
 
-            <g fill="#202820" font-family="monospace" text-anchor="middle">
-                <text x="190" y="226" font-size="12">${safeName}</text>
-                <text x="190" y="241" font-size="8">${category.toUpperCase()} // BYTE BAZAAR</text>
+            <g fill="#202820"
+               font-family="monospace"
+               text-anchor="middle">
+
+                <text x="190" y="230" font-size="12">
+                    ${safeName}
+                </text>
+
+                <text x="190" y="243" font-size="8">
+                    BYTE BAZAAR // ${category.toUpperCase()}
+                </text>
             </g>
         </svg>
     `;
 
-    return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+    return "data:image/svg+xml;charset=UTF-8," +
         encodeURIComponent(svg);
 }
 
 
 // =========================================
-// CREAR TARJETA DE PRODUCTO
+// ENLACES A PRODUCTOS
+// =========================================
+
+function getProductUrl(product) {
+    // Utiliza la URL directa si se ha configurado.
+    if (product.productUrl && product.productUrl.trim() !== "") {
+        return product.productUrl;
+    }
+
+    // Alternativa: buscar productos similares en Newegg.
+    return "https://www.newegg.com/p/pl?d=" +
+        encodeURIComponent(product.search);
+}
+
+
+// =========================================
+// CREAR TARJETA
 // =========================================
 
 function makeProductCard(product) {
@@ -279,15 +399,21 @@ function makeProductCard(product) {
 
     card.className = "product-card";
 
-    const searchUrl =
-        "https://www.newegg.com/p/pl?d=" +
-        encodeURIComponent(product.search);
+    const productUrl = getProductUrl(product);
+
+    const specificationsHTML = Object.entries(
+        product.specifications || {}
+    ).map(([key, value]) => `
+        <li>
+            <strong>${key}:</strong> ${value}
+        </li>
+    `).join("");
 
     card.innerHTML = `
         <div class="product-image-wrap">
 
             <span class="product-tag">
-                ${categoryNames[product.category]}
+                ${categoryNames[product.category] || "Producto"}
             </span>
 
             <img
@@ -305,10 +431,26 @@ function makeProductCard(product) {
         <div class="product-info">
 
             <span class="product-category">
-                ${categoryNames[product.category]}
+                ${categoryNames[product.category] || "Producto"}
             </span>
 
             <h3>${product.name}</h3>
+
+            <p class="product-description">
+                ${product.description || "Información no disponible."}
+            </p>
+
+            <p class="product-brand">
+                MARCA: ${product.brand || "No especificada"}
+            </p>
+
+            <details class="product-specifications">
+                <summary>VER ESPECIFICACIONES [+]</summary>
+
+                <ul>
+                    ${specificationsHTML}
+                </ul>
+            </details>
 
             <div class="product-bottom">
 
@@ -320,12 +462,12 @@ function makeProductCard(product) {
 
                 <a
                     class="product-link"
-                    href="${searchUrl}"
+                    href="${productUrl}"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Buscar ${product.name} en Newegg"
                 >
-                    VER EN NEWEGG
+                    VER PRODUCTO ↗
                 </a>
 
             </div>
@@ -333,7 +475,7 @@ function makeProductCard(product) {
         </div>
     `;
 
-    // Imagen alternativa si el enlace original falla.
+    // Imagen alternativa si falla la imagen externa.
     const img = card.querySelector("img");
 
     img.addEventListener("error", () => {
@@ -348,28 +490,33 @@ function makeProductCard(product) {
 
 
 // =========================================
-// FILTRAR PRODUCTOS
+// FILTRAR Y ORDENAR
 // =========================================
 
 function getVisibleProducts() {
-    const query = searchInput.value
-        .trim()
-        .toLowerCase();
+    const query = searchInput.value.trim().toLowerCase();
 
-    const category = categoryFilter.value;
+    let category = categoryFilter.value;
+
+    // El HTML utiliza "components", pero los productos
+    // guardan la categoría como "component".
+    if (category === "components") {
+        category = "component";
+    }
 
     let visible = products.filter(product => {
+        const searchableText = [
+            product.id,
+            product.name,
+            product.label,
+            product.brand,
+            product.description,
+            product.search,
+            categoryNames[product.category],
+            ...Object.values(product.specifications || {})
+        ].join(" ").toLowerCase();
 
-        const searchableText = `
-            ${product.name}
-            ${product.label}
-            ${product.search}
-            ${product.id}
-            ${categoryNames[product.category]}
-        `.toLowerCase();
-
-        const matchesQuery =
-            searchableText.includes(query);
+        const matchesQuery = searchableText.includes(query);
 
         const matchesCategory =
             category === "all" ||
@@ -378,44 +525,28 @@ function getVisibleProducts() {
         return matchesQuery && matchesCategory;
     });
 
-
-    // =====================================
-    // ORDENAR PRODUCTOS
-    // =====================================
-
     switch (sortFilter.value) {
-
+        case "price-asc":
         case "low":
-
-            visible.sort((a, b) =>
-                a.price - b.price
-            );
-
+            visible.sort((a, b) => a.price - b.price);
             break;
 
+        case "price-desc":
         case "high":
-
-            visible.sort((a, b) =>
-                b.price - a.price
-            );
-
+            visible.sort((a, b) => b.price - a.price);
             break;
 
+        case "name-asc":
         case "name":
-
             visible.sort((a, b) =>
                 a.name.localeCompare(b.name, "es")
             );
-
             break;
 
         default:
-
             visible.sort((a, b) =>
-                Number(b.featured) -
-                Number(a.featured)
+                Number(b.featured) - Number(a.featured)
             );
-
             break;
     }
 
@@ -428,59 +559,57 @@ function getVisibleProducts() {
 // =========================================
 
 function renderProducts() {
-
     const visible = getVisibleProducts();
 
-    // Limpiar tarjetas anteriores.
     productGrid.replaceChildren();
 
-    // Crear las tarjetas nuevas.
     const cards = visible.map(product =>
         makeProductCard(product)
     );
 
     productGrid.append(...cards);
 
-    // Actualizar contador.
     resultCount.textContent =
         `${String(visible.length).padStart(2, "0")} PRODUCTOS`;
 
-    // Mostrar mensaje cuando no hay resultados.
     emptyState.hidden = visible.length !== 0;
-
     productGrid.hidden = visible.length === 0;
 }
 
 
 // =========================================
-// EVENTOS
+// EVENTOS DE FILTRADO
 // =========================================
 
-// Buscar mientras el usuario escribe.
-searchInput.addEventListener(
-    "input",
-    renderProducts
-);
+searchInput.addEventListener("input", renderProducts);
 
-// Filtrar por categoría.
-categoryFilter.addEventListener(
-    "change",
-    renderProducts
-);
+categoryFilter.addEventListener("change", renderProducts);
 
-// Cambiar el orden de los resultados.
-sortFilter.addEventListener(
-    "change",
-    renderProducts
-);
+sortFilter.addEventListener("change", renderProducts);
 
 
 // =========================================
-// AÑO AUTOMÁTICO EN EL FOOTER
+// REINICIAR FILTROS
 // =========================================
 
-document.querySelector("#year").textContent =
-    new Date().getFullYear();
+if (resetFilters) {
+    resetFilters.addEventListener("click", () => {
+        searchInput.value = "";
+        categoryFilter.value = "all";
+        sortFilter.value = "default";
+
+        renderProducts();
+    });
+}
+
+
+// =========================================
+// AÑO DEL FOOTER
+// =========================================
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
 
 
 // =========================================
