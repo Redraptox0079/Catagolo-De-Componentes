@@ -1,12 +1,6 @@
-// =========================================
-// BYTE BAZAAR
-// Catálogo tecnológico retro
-// Proyecto académico
-// =========================================
-
-// Los precios son estimados y están expresados en USD.
-// Las especificaciones deben verificarse antes de comprar.
-// Las búsquedas de Newegg permiten encontrar productos similares.
+// ============================================
+// BYTE BAZAAR — CATÁLOGO RETRO
+// ============================================
 
 const products = [
     {
@@ -14,237 +8,255 @@ const products = [
         name: "Workstation Creator Pro",
         category: "workstation",
         label: "Estación de trabajo",
-        brand: "Varias marcas",
-        price: 2499.99,
+        brand: "CyberPowerPC",
+        price: 2259.99,
         featured: true,
-        search: "workstation desktop computer",
-        description: "Computadora de alto rendimiento para creación de contenido, diseño y trabajo profesional.",
+        description: "Equipo de alto rendimiento para creación de contenido, diseño y multitarea.",
+        search: "CyberPowerPC workstation creator desktop",
+        productUrl: "https://www.newegg.com/p/pl?d=CyberPowerPC+workstation+desktop",
+        image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg",
         specifications: {
             "Categoría": "Estación de trabajo",
-            "Uso": "Diseño y productividad",
-            "Precio": "Estimado en USD"
-        },
-        image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg",
-        productUrl: ""
+            "Uso": "Creación de contenido y productividad",
+            "Configuración": "Verificar en la página del vendedor"
+        }
     },
 
     {
         id: "DT-002",
-        name: "Desktop Gaming Tower",
+        name: "ABS Flux II Gaming PC",
         category: "desktop",
-        label: "Desktop",
-        brand: "Varias marcas",
-        price: 1399.99,
+        label: "Desktop gaming",
+        brand: "ABS",
+        price: 1799.99,
         featured: true,
-        search: "gaming desktop computer tower",
-        description: "Computadora de escritorio orientada a videojuegos y aplicaciones exigentes.",
-        specifications: {
-            "Categoría": "PC de escritorio",
-            "Uso": "Gaming",
-            "Formato": "Torre"
-        },
+        description: "PC gaming con procesador Intel Core i7, gráficos GeForce RTX 5070 y memoria DDR5.",
+        search: "ABS Flux II Aqua i7-14700F RTX 5070",
+        productUrl: "https://www.newegg.com/p/pl?d=ABS+Flux+II+Aqua+i7-14700F+RTX+5070",
         image: "https://c1.neweggimages.com/productimage/nb640/83-360-491-01.jpg",
-        productUrl: ""
+        specifications: {
+            "Procesador": "Intel Core i7-14700F",
+            "Tarjeta gráfica": "GeForce RTX 5070 de 12 GB",
+            "Memoria": "32 GB DDR5",
+            "Almacenamiento": "SSD NVMe de 1 TB",
+            "Sistema operativo": "Windows 11 Home"
+        }
     },
 
     {
         id: "LP-003",
-        name: "Laptop Performance 16",
+        name: "Laptop MSI Gaming",
         category: "laptop",
         label: "Laptop",
-        brand: "Varias marcas",
+        brand: "MSI",
         price: 1199.99,
         featured: true,
-        search: "16 inch performance laptop",
-        description: "Laptop de alto rendimiento para productividad, entretenimiento y multitarea.",
-        specifications: {
-            "Categoría": "Laptop",
-            "Tamaño anunciado": "16 pulgadas",
-            "Uso": "Productividad y entretenimiento"
-        },
+        description: "Laptop orientada a videojuegos, aplicaciones exigentes y productividad.",
+        search: "MSI gaming laptop 16 inch",
+        productUrl: "https://www.newegg.com/p/pl?d=MSI+gaming+laptop+16+inch",
         image: "https://c1.neweggimages.com/productimage/nb640/34-156-634-01.jpg",
-        productUrl: ""
+        specifications: {
+            "Marca": "MSI",
+            "Categoría": "Laptop gaming",
+            "Pantalla": "Consultar modelo específico",
+            "Gráficos": "Consultar modelo específico"
+        }
     },
 
     {
         id: "MB-004",
-        name: "Smartphone Nova X",
+        name: "Smartphone Android",
         category: "mobile",
         label: "Celular",
         brand: "Varias marcas",
         price: 799.99,
         featured: false,
-        search: "unlocked android smartphone",
-        description: "Teléfono inteligente para comunicación, aplicaciones, fotografía y entretenimiento.",
+        description: "Teléfono inteligente para aplicaciones, fotografía, comunicación y entretenimiento.",
+        search: "unlocked Android smartphone",
+        productUrl: "https://www.newegg.com/p/pl?d=unlocked+Android+smartphone",
+        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
         specifications: {
             "Categoría": "Smartphone",
             "Sistema": "Android, según modelo",
-            "Conectividad": "Móvil e inalámbrica"
-        },
-        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
-        productUrl: ""
+            "Conectividad": "Consultar modelo específico",
+            "Cámara": "Consultar modelo específico"
+        }
     },
 
     {
         id: "CP-005",
-        name: "Tarjeta gráfica RTX",
+        name: "GIGABYTE GeForce RTX 5070",
         category: "component",
-        label: "GPU",
-        brand: "NVIDIA y fabricantes asociados",
+        label: "Tarjeta gráfica",
+        brand: "GIGABYTE / NVIDIA",
         price: 649.99,
         featured: true,
-        search: "NVIDIA GeForce RTX graphics card",
-        description: "Tarjeta gráfica dedicada para videojuegos, creación de contenido y procesamiento visual.",
+        description: "Tarjeta gráfica GeForce RTX 5070 con 12 GB de memoria para gaming y creación de contenido.",
+        search: "GIGABYTE GeForce RTX 5070 12GB",
+        productUrl: "https://www.newegg.com/gigabyte-gv-n5070gaming-oc-12gd-geforce-rtx-5070-12gb-graphics-card-triple-fans/p/N82E16814932774",
+        image: "https://c1.neweggimages.com/productimage/nb640/14-932-774-01.jpg",
         specifications: {
-            "Categoría": "Tarjeta gráfica",
-            "Familia": "NVIDIA GeForce RTX",
-            "Interfaz habitual": "PCI Express"
-        },
-        image: "https://c1.neweggimages.com/productimage/nb640/14-137-784-01.jpg",
-        productUrl: ""
+            "Fabricante": "GIGABYTE",
+            "GPU": "NVIDIA GeForce RTX 5070",
+            "Memoria gráfica": "12 GB",
+            "Tipo de memoria": "GDDR7",
+            "Uso": "Gaming y creación de contenido"
+        }
     },
 
     {
         id: "CP-006",
-        name: "Procesador de 8 núcleos",
+        name: "AMD Ryzen 7 9800X3D",
         category: "component",
-        label: "CPU",
+        label: "Procesador",
         brand: "AMD",
-        price: 329.99,
-        featured: false,
-        search: "AMD Ryzen 7 processor",
-        description: "Procesador de la familia Ryzen 7 para equipos de escritorio y tareas exigentes. Comprueba el modelo exacto antes de comprar.",
+        price: 444.00,
+        featured: true,
+        description: "Procesador de escritorio de 8 núcleos y 16 hilos, diseñado para ofrecer alto rendimiento en videojuegos.",
+        search: "AMD Ryzen 7 9800X3D",
+        productUrl: "https://www.newegg.com/amd-ryzen-7-9000-series-ryzen-7-9800x3d-granite-ridge-zen-5-socket-am5-desktop-cpu-processor/p/N82E16819113877",
+        image: "https://c1.neweggimages.com/productimage/nb640/19-113-877-01.jpg",
         specifications: {
-            "Fabricante buscado": "AMD",
-            "Familia buscada": "Ryzen 7",
-            "Uso": "Gaming y productividad",
-            "Importante": "Verificar modelo y número de núcleos"
-        },
-        image: "https://c1.neweggimages.com/productimage/nb640/19-113-777-01.jpg",
-        productUrl: ""
+            "Modelo": "Ryzen 7 9800X3D",
+            "Núcleos": "8",
+            "Hilos": "16",
+            "Frecuencia máxima": "Hasta 5.2 GHz",
+            "Socket": "AM5",
+            "TDP": "120 W",
+            "Memoria compatible": "DDR5"
+        }
     },
 
     {
         id: "CP-007",
-        name: "Memoria RAM 32 GB",
+        name: "CORSAIR Vengeance RGB 32 GB",
         category: "component",
-        label: "Memoria",
-        brand: "Varias marcas",
-        price: 99.99,
+        label: "Memoria RAM",
+        brand: "CORSAIR",
+        price: 119.99,
         featured: false,
-        search: "32GB DDR5 desktop memory kit",
-        description: "Memoria para mejorar la capacidad de multitarea de una computadora compatible.",
+        description: "Kit de memoria DDR5 de 32 GB compuesto por dos módulos de 16 GB, con iluminación RGB.",
+        search: "CORSAIR Vengeance RGB 32GB DDR5 6000",
+        productUrl: "https://www.newegg.com/corsair-vengeance-rgb-32gb-ddr5-6000-cas-latency-cl36-desktop-memory-black/p/N82E16820236991",
+        image: "https://c1.neweggimages.com/productimage/nb640/20-236-991-01.jpg",
         specifications: {
-            "Capacidad anunciada": "32 GB",
-            "Tipo buscado": "DDR5",
-            "Formato buscado": "Memoria de escritorio",
-            "Importante": "Verificar compatibilidad con la placa base"
-        },
-        image: "https://c1.neweggimages.com/productimage/nb640/20-236-781-01.jpg",
-        productUrl: ""
+            "Modelo": "CORSAIR Vengeance RGB",
+            "Capacidad": "32 GB (2 × 16 GB)",
+            "Tipo": "DDR5",
+            "Velocidad": "6000 MT/s",
+            "Formato": "DIMM para escritorio",
+            "Iluminación": "RGB"
+        }
     },
 
     {
         id: "CP-008",
-        name: "SSD NVMe 2 TB",
+        name: "Samsung 990 PRO 2 TB",
         category: "component",
-        label: "Almacenamiento",
-        brand: "Varias marcas",
-        price: 149.99,
+        label: "SSD NVMe",
+        brand: "Samsung",
+        price: 409.99,
         featured: false,
-        search: "2TB NVMe SSD",
-        description: "Unidad de almacenamiento de estado sólido para guardar archivos, aplicaciones y juegos.",
+        description: "Unidad SSD NVMe PCIe 4.0 diseñada para almacenamiento rápido, videojuegos y estaciones de trabajo.",
+        search: "Samsung 990 PRO 2TB",
+        productUrl: "https://www.newegg.com/samsung-2tb-990-pro-nvme-2-0/p/N82E16820147861",
+        image: "https://c1.neweggimages.com/productimage/nb640/20-147-861-01.jpg",
         specifications: {
-            "Capacidad anunciada": "2 TB",
-            "Tipo buscado": "SSD NVMe",
-            "Uso": "Almacenamiento",
-            "Importante": "Verificar interfaz y compatibilidad"
-        },
-        image: "https://c1.neweggimages.com/productimage/nb640/20-156-635-01.jpg",
-        productUrl: ""
+            "Modelo": "Samsung 990 PRO",
+            "Capacidad": "2 TB",
+            "Interfaz": "PCIe 4.0 x4 NVMe",
+            "Formato": "M.2 2280",
+            "Lectura secuencial anunciada": "Hasta 7,450 MB/s"
+        }
     },
 
     {
         id: "LP-009",
-        name: "Laptop Ultraligera 14",
+        name: "Laptop Ultrabook 14",
         category: "laptop",
         label: "Laptop",
         brand: "Varias marcas",
         price: 899.99,
         featured: false,
+        description: "Laptop compacta para estudiantes, trabajo de oficina y productividad diaria.",
         search: "14 inch ultrabook laptop",
-        description: "Laptop compacta pensada para estudiar, trabajar y transportar fácilmente.",
-        specifications: {
-            "Categoría": "Laptop",
-            "Tamaño anunciado": "14 pulgadas",
-            "Uso": "Estudio y productividad"
-        },
+        productUrl: "https://www.newegg.com/p/pl?d=14+inch+ultrabook+laptop",
         image: "https://c1.neweggimages.com/productimage/nb640/34-156-634-01.jpg",
-        productUrl: ""
+        specifications: {
+            "Categoría": "Laptop ultraligera",
+            "Pantalla": "14 pulgadas, según modelo",
+            "Uso": "Estudio y productividad",
+            "Peso y batería": "Consultar modelo específico"
+        }
     },
 
     {
         id: "MB-010",
-        name: "Smartphone Compact",
+        name: "Smartphone Android Compacto",
         category: "mobile",
         label: "Celular",
         brand: "Varias marcas",
         price: 499.99,
         featured: false,
-        search: "unlocked compact smartphone",
-        description: "Teléfono inteligente de formato compacto para las tareas cotidianas.",
+        description: "Teléfono inteligente para comunicación, aplicaciones y entretenimiento en un formato compacto.",
+        search: "compact unlocked Android smartphone",
+        productUrl: "https://www.newegg.com/p/pl?d=compact+unlocked+Android+smartphone",
+        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
         specifications: {
             "Categoría": "Smartphone",
-            "Formato": "Compacto",
-            "Uso": "Comunicación y aplicaciones"
-        },
-        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
-        productUrl: ""
+            "Formato": "Compacto, según modelo",
+            "Sistema operativo": "Consultar modelo específico",
+            "Almacenamiento": "Consultar modelo específico"
+        }
     },
 
     {
         id: "DT-011",
-        name: "Desktop Oficina",
+        name: "CyberPowerPC Gaming Desktop",
         category: "desktop",
         label: "Desktop",
-        brand: "Varias marcas",
-        price: 599.99,
+        brand: "CyberPowerPC",
+        price: 2259.99,
         featured: false,
-        search: "business desktop PC",
-        description: "Computadora de escritorio para tareas de oficina, navegación y productividad.",
-        specifications: {
-            "Categoría": "PC de escritorio",
-            "Uso": "Oficina y estudio",
-            "Formato": "Equipo de escritorio"
-        },
+        description: "Computadora de escritorio con procesador Ryzen 7 9800X3D, memoria DDR5 y gráficos dedicados.",
+        search: "CyberPowerPC Ryzen 7 9800X3D gaming desktop",
+        productUrl: "https://www.newegg.com/p/pl?d=CyberPowerPC+Ryzen+7+9800X3D+gaming+desktop",
         image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg",
-        productUrl: ""
+        specifications: {
+            "Procesador buscado": "AMD Ryzen 7 9800X3D",
+            "Categoría": "PC gaming",
+            "Gráficos": "Consultar configuración",
+            "Memoria y almacenamiento": "Consultar configuración"
+        }
     },
 
     {
         id: "CP-012",
-        name: "Fuente de poder 850 W",
+        name: "MSI MAG A850GL PCIE5",
         category: "component",
-        label: "Energía",
-        brand: "Varias marcas",
-        price: 129.99,
+        label: "Fuente de poder",
+        brand: "MSI",
+        price: 109.99,
         featured: false,
-        search: "850W 80 plus gold power supply",
-        description: "Fuente de alimentación para suministrar energía a los componentes de una computadora.",
+        description: "Fuente de alimentación modular de 850 W con certificación 80 PLUS Gold y compatibilidad ATX 3.1.",
+        search: "MSI MAG A850GL PCIE5 850W",
+        productUrl: "https://www.newegg.com/msi-atx12v-850-w-80-plus-gold-certified-power-supplies-black-mag-a850gl-pcie5/p/N82E16817701021",
+        image: "https://c1.neweggimages.com/productimage/nb640/17-701-021-01.jpg",
         specifications: {
-            "Potencia anunciada": "850 W",
-            "Certificación buscada": "80 PLUS Gold",
-            "Importante": "Verificar modelo, conectores y certificación"
-        },
-        image: "https://c1.neweggimages.com/productimage/nb640/17-139-287-01.jpg",
-        productUrl: ""
+            "Modelo": "MSI MAG A850GL PCIE5",
+            "Potencia": "850 W",
+            "Certificación": "80 PLUS Gold",
+            "Diseño": "Totalmente modular",
+            "Estándar": "ATX 3.1",
+            "Garantía anunciada": "10 años; verificar condiciones"
+        }
     }
 ];
 
 
-// =========================================
+// ============================================
 // CATEGORÍAS
-// =========================================
+// ============================================
 
 const categoryNames = {
     workstation: "Workstation",
@@ -255,9 +267,9 @@ const categoryNames = {
 };
 
 
-// =========================================
+// ============================================
 // ELEMENTOS HTML
-// =========================================
+// ============================================
 
 const productGrid = document.querySelector("#productGrid");
 const searchInput = document.querySelector("#searchInput");
@@ -269,9 +281,9 @@ const resetFilters = document.querySelector("#resetFilters");
 const yearElement = document.querySelector("#year");
 
 
-// =========================================
-// FORMATO DE PRECIOS
-// =========================================
+// ============================================
+// FORMATO DE PRECIO
+// ============================================
 
 function formatPrice(price) {
     return new Intl.NumberFormat("en-US", {
@@ -281,90 +293,32 @@ function formatPrice(price) {
 }
 
 
-// =========================================
-// IMÁGENES DE RESPALDO
-// =========================================
+// ============================================
+// IMAGEN DE RESPALDO
+// ============================================
 
 function createFallbackImage(name, category) {
-    const drawings = {
-        workstation: `
-            <rect x="80" y="45" width="220" height="125" rx="5"/>
-            <rect x="95" y="60" width="190" height="95"/>
-            <path d="M170 170v30h40v-30 M140 205h100"/>
-            <path d="M115 85h150 M115 100h110 M115 115h130"/>
-        `,
-
-        desktop: `
-            <rect x="125" y="35" width="130" height="170" rx="5"/>
-            <rect x="140" y="50" width="100" height="140"/>
-            <circle cx="190" cy="85" r="22"/>
-            <circle cx="190" cy="140" r="22"/>
-            <circle cx="190" cy="85" r="8"/>
-            <circle cx="190" cy="140" r="8"/>
-        `,
-
-        laptop: `
-            <path d="M105 55h170v115H105z"/>
-            <rect x="118" y="68" width="144" height="88"/>
-            <path d="M105 170L80 195h220l-25-25z"/>
-            <path d="M155 181h70"/>
-        `,
-
-        mobile: `
-            <rect x="145" y="25" width="90" height="190" rx="12"/>
-            <rect x="153" y="43" width="74" height="150" rx="4"/>
-            <circle cx="190" cy="203" r="4"/>
-            <path d="M177 34h26"/>
-        `,
-
-        component: `
-            <rect x="90" y="45" width="200" height="145" rx="4"/>
-            <rect x="130" y="75" width="120" height="85"/>
-            <rect x="145" y="90" width="90" height="55"/>
-            <path d="M105 190v18 M130 190v18 M155 190v18 M180 190v18 M205 190v18 M230 190v18 M255 190v18 M280 190v18"/>
-            <path d="M90 65h-15v25h15 M290 65h15v25h-15"/>
-        `
-    };
-
-    const drawing = drawings[category] || drawings.component;
-
     const safeName = String(name)
         .replace(/[&<>"']/g, "")
-        .slice(0, 30);
+        .slice(0, 35);
 
     const svg = `
         <svg xmlns="http://www.w3.org/2000/svg"
-             width="380"
-             height="250"
+             width="380" height="250"
              viewBox="0 0 380 250">
 
             <rect width="380" height="250" fill="#e7e4d4"/>
 
-            <g stroke="#33ff33" stroke-width="1" opacity="0.2">
-                ${Array.from({ length: 13 }, (_, i) =>
-                    `<path d="M0 ${i * 20} H380"/>`
-                ).join("")}
+            <g fill="none" stroke="#202820" stroke-width="4">
+                <rect x="120" y="45" width="140" height="110" rx="4"/>
+                <rect x="132" y="57" width="116" height="85"/>
+                <path d="M180 155v22h20v-22 M150 182h80"/>
             </g>
 
-            <g fill="none"
-               stroke="#202820"
-               stroke-width="4"
-               stroke-linejoin="round"
-               stroke-linecap="round">
-                ${drawing}
-            </g>
-
-            <g fill="#202820"
-               font-family="monospace"
-               text-anchor="middle">
-
-                <text x="190" y="230" font-size="12">
-                    ${safeName}
-                </text>
-
-                <text x="190" y="243" font-size="8">
-                    BYTE BAZAAR // ${category.toUpperCase()}
-                </text>
+            <g fill="#202820" font-family="monospace" text-anchor="middle">
+                <text x="190" y="100" font-size="13">BYTE / 001</text>
+                <text x="190" y="215" font-size="12">${safeName}</text>
+                <text x="190" y="232" font-size="9">${category.toUpperCase()}</text>
             </g>
         </svg>
     `;
@@ -374,46 +328,24 @@ function createFallbackImage(name, category) {
 }
 
 
-// =========================================
-// ENLACES A PRODUCTOS
-// =========================================
-
-function getProductUrl(product) {
-    // Utiliza la URL directa si se ha configurado.
-    if (product.productUrl && product.productUrl.trim() !== "") {
-        return product.productUrl;
-    }
-
-    // Alternativa: buscar productos similares en Newegg.
-    return "https://www.newegg.com/p/pl?d=" +
-        encodeURIComponent(product.search);
-}
-
-
-// =========================================
-// CREAR TARJETA
-// =========================================
+// ============================================
+// CREAR TARJETA DE PRODUCTO
+// ============================================
 
 function makeProductCard(product) {
     const card = document.createElement("article");
-
     card.className = "product-card";
 
-    const productUrl = getProductUrl(product);
-
-    const specificationsHTML = Object.entries(
-        product.specifications || {}
-    ).map(([key, value]) => `
-        <li>
-            <strong>${key}:</strong> ${value}
-        </li>
-    `).join("");
+    const specsHTML = Object.entries(product.specifications || {})
+        .map(([key, value]) => `
+            <li><strong>${key}:</strong> ${value}</li>
+        `)
+        .join("");
 
     card.innerHTML = `
         <div class="product-image-wrap">
-
             <span class="product-tag">
-                ${categoryNames[product.category] || "Producto"}
+                ${categoryNames[product.category]}
             </span>
 
             <img
@@ -422,60 +354,47 @@ function makeProductCard(product) {
                 loading="lazy"
             >
 
-            <span class="product-code">
-                ${product.id}
-            </span>
-
+            <span class="product-code">${product.id}</span>
         </div>
 
         <div class="product-info">
-
             <span class="product-category">
-                ${categoryNames[product.category] || "Producto"}
+                ${categoryNames[product.category]}
             </span>
 
             <h3>${product.name}</h3>
 
             <p class="product-description">
-                ${product.description || "Información no disponible."}
+                ${product.description}
             </p>
 
             <p class="product-brand">
-                MARCA: ${product.brand || "No especificada"}
+                MARCA: ${product.brand}
             </p>
 
             <details class="product-specifications">
                 <summary>VER ESPECIFICACIONES [+]</summary>
-
-                <ul>
-                    ${specificationsHTML}
-                </ul>
+                <ul>${specsHTML}</ul>
             </details>
 
             <div class="product-bottom">
-
                 <div class="price">
                     ${formatPrice(product.price)}
-
-                    <small>PRECIO ESTIMADO</small>
+                    <small>PRECIO DE REFERENCIA</small>
                 </div>
 
                 <a
                     class="product-link"
-                    href="${productUrl}"
+                    href="${product.productUrl}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Buscar ${product.name} en Newegg"
                 >
                     VER PRODUCTO ↗
                 </a>
-
             </div>
-
         </div>
     `;
 
-    // Imagen alternativa si falla la imagen externa.
     const img = card.querySelector("img");
 
     img.addEventListener("error", () => {
@@ -489,23 +408,21 @@ function makeProductCard(product) {
 }
 
 
-// =========================================
+// ============================================
 // FILTRAR Y ORDENAR
-// =========================================
+// ============================================
 
 function getVisibleProducts() {
     const query = searchInput.value.trim().toLowerCase();
 
     let category = categoryFilter.value;
 
-    // El HTML utiliza "components", pero los productos
-    // guardan la categoría como "component".
     if (category === "components") {
         category = "component";
     }
 
-    let visible = products.filter(product => {
-        const searchableText = [
+    const visible = products.filter(product => {
+        const searchable = [
             product.id,
             product.name,
             product.label,
@@ -513,10 +430,11 @@ function getVisibleProducts() {
             product.description,
             product.search,
             categoryNames[product.category],
+            ...Object.keys(product.specifications || {}),
             ...Object.values(product.specifications || {})
         ].join(" ").toLowerCase();
 
-        const matchesQuery = searchableText.includes(query);
+        const matchesQuery = searchable.includes(query);
 
         const matchesCategory =
             category === "all" ||
@@ -547,26 +465,22 @@ function getVisibleProducts() {
             visible.sort((a, b) =>
                 Number(b.featured) - Number(a.featured)
             );
-            break;
     }
 
     return visible;
 }
 
 
-// =========================================
+// ============================================
 // MOSTRAR PRODUCTOS
-// =========================================
+// ============================================
 
 function renderProducts() {
     const visible = getVisibleProducts();
 
     productGrid.replaceChildren();
 
-    const cards = visible.map(product =>
-        makeProductCard(product)
-    );
-
+    const cards = visible.map(makeProductCard);
     productGrid.append(...cards);
 
     resultCount.textContent =
@@ -577,43 +491,30 @@ function renderProducts() {
 }
 
 
-// =========================================
-// EVENTOS DE FILTRADO
-// =========================================
+// ============================================
+// EVENTOS
+// ============================================
 
 searchInput.addEventListener("input", renderProducts);
-
 categoryFilter.addEventListener("change", renderProducts);
-
 sortFilter.addEventListener("change", renderProducts);
-
-
-// =========================================
-// REINICIAR FILTROS
-// =========================================
 
 if (resetFilters) {
     resetFilters.addEventListener("click", () => {
         searchInput.value = "";
         categoryFilter.value = "all";
         sortFilter.value = "default";
-
         renderProducts();
     });
 }
-
-
-// =========================================
-// AÑO DEL FOOTER
-// =========================================
 
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
 
 
-// =========================================
-// INICIAR CATÁLOGO
-// =========================================
+// ============================================
+// INICIAR
+// ============================================
 
 renderProducts();
