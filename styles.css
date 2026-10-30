@@ -942,3 +942,462 @@ footer p {
     background-position: right 8px center;
     background-size: 14px;
 }
+```css
+/* ==========================================
+   BYTE BAZAAR — DISEÑO PARA MÓVILES Y TABLETAS
+   Pegar al final de styles.css
+   ========================================== */
+
+/* Evitar desbordamientos horizontales */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* El catálogo se adapta al espacio disponible */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 18px;
+    width: 100%;
+}
+
+/* Las tarjetas crecen independientemente */
+.product-card {
+    width: 100%;
+    min-width: 0;
+    align-self: start;
+    overflow: hidden;
+}
+
+.product-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.product-info h3 {
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+.product-description {
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Imágenes adaptables */
+.product-image-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-image-wrap img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+}
+
+/* Precios y botones */
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.price {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.product-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* Especificaciones desplegables */
+.product-specifications {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.product-specifications summary {
+    cursor: pointer;
+    line-height: 1.7;
+}
+
+.product-specifications ul {
+    padding-left: 20px;
+}
+
+.product-specifications li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Filtros y buscador */
+.catalog-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+}
+
+.search-box,
+.select-box {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.search-box input,
+.select-box select {
+    max-width: 100%;
+}
+
+/* ==========================================
+   TABLETAS
+   ========================================== */
+
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .product-image-wrap img {
+        height: 180px;
+    }
+
+    .site-header {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero {
+        gap: 24px;
+    }
+
+    .hero-content,
+    .hero-art {
+        min-width: 0;
+    }
+
+    .catalog-tools > * {
+        flex: 1 1 200px;
+    }
+}
+
+/* ==========================================
+   TELÉFONOS
+   ========================================== */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Encabezado vertical */
+    .site-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .logo {
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+    }
+
+    .system-status {
+        font-size: 10px;
+    }
+
+    /* Portada */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 28px 16px;
+    }
+
+    .hero-content,
+    .hero-art {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 10vw, 52px);
+        line-height: 1.12;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .hero-button {
+        display: inline-block;
+        max-width: 100%;
+        padding: 12px;
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .hero-stats strong {
+        font-size: 18px;
+    }
+
+    .hero-stats span {
+        font-size: 9px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Terminal ilustrada */
+    .terminal {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .terminal-screen {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .terminal-screen pre {
+        max-width: 100%;
+        font-size: clamp(7px, 2.2vw, 11px);
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+
+    .art-label {
+        font-size: 9px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Cinta de anuncios */
+    .ticker {
+        overflow: hidden;
+    }
+
+    /* Sección del catálogo */
+    .catalog-section {
+        padding: 30px 12px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .section-description {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .catalog-counter {
+        max-width: 100%;
+        font-size: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Una tarjeta por fila */
+    .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .product-image-wrap img {
+        height: 220px;
+        object-fit: contain;
+    }
+
+    .product-info {
+        padding: 14px;
+    }
+
+    .product-info h3 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .product-description {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .product-brand,
+    .product-category {
+        font-size: 10px;
+    }
+
+    .product-specifications summary {
+        font-size: 11px;
+        padding: 8px 0;
+    }
+
+    .product-specifications li {
+        font-size: 12px;
+    }
+
+    .product-bottom {
+        align-items: flex-start;
+        gap: 12px;
+        padding-top: 14px;
+    }
+
+    .price {
+        font-size: 19px;
+    }
+
+    .price small {
+        font-size: 9px;
+    }
+
+    .product-link {
+        flex: 1 1 120px;
+        font-size: 10px;
+        min-height: 44px;
+    }
+
+    /* Sobre nosotros */
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        padding: 30px 16px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-section h2 {
+        font-size: clamp(25px, 7vw, 36px);
+        line-height: 1.3;
+    }
+
+    .about-section p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .about-side {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+        font-size: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Pie de página */
+    footer {
+        padding: 24px 16px;
+        overflow-wrap: anywhere;
+    }
+
+    footer p {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+}
+
+/* ==========================================
+   TELÉFONOS MUY PEQUEÑOS
+   ========================================== */
+
+@media (max-width: 360px) {
+    .product-image-wrap img {
+        height: 175px;
+    }
+
+    .product-info {
+        padding: 11px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 17px;
+    }
+
+    .hero-stats {
+        gap: 6px;
+    }
+
+    .hero-stats strong {
+        font-size: 16px;
+    }
+
+    .main-nav {
+        gap: 8px;
+    }
+}
+```
