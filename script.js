@@ -188,76 +188,84 @@ function formatPrice(price) {
 // SVG localmente mediante JavaScript.
 
 function createFallbackImage(name, category) {
-    const safeName = name
-        .replace(/[&<>"]/g, "")
-        .slice(0, 28);
+    const icons = {
+        workstation: `
+            <rect x="105" y="65" width="170" height="115" rx="5"/>
+            <rect x="118" y="78" width="144" height="88"/>
+            <path d="M175 180v25h30v-25 M155 210h70"/>
+            <path d="M130 100h120 M130 115h80 M130 130h100"/>
+        `,
+        desktop: `
+            <rect x="145" y="45" width="100" height="160" rx="5"/>
+            <rect x="155" y="55" width="80" height="140"/>
+            <circle cx="195" cy="85" r="17"/>
+            <circle cx="195" cy="135" r="17"/>
+            <path d="M195 65v40 M175 85h40 M195 115v40 M175 135h40"/>
+            <circle cx="225" cy="175" r="4"/>
+        `,
+        laptop: `
+            <path d="M110 75 Q110 65 122 65 H258 Q270 65 270 75 V165 H110 Z"/>
+            <rect x="120" y="75" width="140" height="80"/>
+            <path d="M110 165 L85 195 Q82 202 95 202 H285 Q298 202 295 195 L270 165 Z"/>
+            <path d="M155 180h70"/>
+        `,
+        mobile: `
+            <rect x="145" y="35" width="90" height="175" rx="12"/>
+            <rect x="153" y="52" width="74" height="137" rx="3"/>
+            <circle cx="190" cy="198" r="4"/>
+            <path d="M177 44h26"/>
+        `,
+        component: `
+            <rect x="100" y="65" width="180" height="120" rx="4"/>
+            <rect x="135" y="90" width="110" height="70"/>
+            <rect x="150" y="105" width="80" height="40"/>
+            <path d="M100 80h-20v20h20 M280 80h20v20h-20"/>
+            <path d="M120 185v18 M145 185v18 M170 185v18 M195 185v18 M220 185v18 M245 185v18 M270 185v18"/>
+        `
+    };
+
+    const drawings = icons[category] || icons.component;
+
+    const safeName = String(name)
+        .replace(/[&<>"']/g, "")
+        .slice(0, 32);
 
     const svg = `
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="480"
-            height="320"
-            viewBox="0 0 480 320"
-        >
-            <rect
-                width="480"
-                height="320"
-                fill="#e7e4d4"
-            />
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="380" height="250"
+             viewBox="0 0 380 250">
 
-            <g
-                fill="none"
-                stroke="#20231d"
-                stroke-width="5"
-            >
-                <rect
-                    x="150"
-                    y="65"
-                    width="180"
-                    height="125"
-                    rx="5"
-                />
+            <defs>
+                <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#e8e6d9"/>
+                    <stop offset="100%" stop-color="#c9c9b9"/>
+                </linearGradient>
+            </defs>
 
-                <path d="M210 190v28h60v-28" />
+            <rect width="380" height="250" fill="url(#background)"/>
 
-                <path d="M180 230h120" />
-
-                <path
-                    d="M175 90h130v70H175z"
-                    stroke="#8a927c"
-                />
+            <g stroke="#33ff33" stroke-width="1" opacity="0.35">
+                ${Array.from({length: 13}, (_, i) =>
+                    `<path d="M0 ${i * 20} H380"/>`
+                ).join("")}
             </g>
 
-            <text
-                x="240"
-                y="128"
-                font-family="monospace"
-                font-size="18"
-                text-anchor="middle"
-                fill="#20231d"
-            >BYTE / 001</text>
+            <g fill="none"
+               stroke="#202820"
+               stroke-width="4"
+               stroke-linejoin="round"
+               stroke-linecap="round">
+                ${drawings}
+            </g>
 
-            <text
-                x="240"
-                y="270"
-                font-family="monospace"
-                font-size="14"
-                text-anchor="middle"
-                fill="#20231d"
-            >${safeName}</text>
-
-            <text
-                x="240"
-                y="293"
-                font-family="monospace"
-                font-size="10"
-                text-anchor="middle"
-                fill="#727568"
-            >${category.toUpperCase()}</text>
+            <g fill="#202820" font-family="monospace" text-anchor="middle">
+                <text x="190" y="226" font-size="12">${safeName}</text>
+                <text x="190" y="241" font-size="8">${category.toUpperCase()} // BYTE BAZAAR</text>
+            </g>
         </svg>
     `;
 
-    return "data:image/svg+xml;charset=UTF-8," +
+    return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
         encodeURIComponent(svg);
 }
 
