@@ -138,7 +138,7 @@ const products = [
         description: "Kit de memoria DDR5 de 32 GB compuesto por dos módulos de 16 GB, con iluminación RGB.",
         search: "CORSAIR Vengeance RGB 32GB DDR5 6000",
         productUrl: "https://www.newegg.com/corsair-vengeance-rgb-32gb-ddr5-6000-cas-latency-cl36-desktop-memory-black/p/N82E16820236991",
-        image: "https://c1.neweggimages.com/productimage/nb640/20-236-991-01.jpg",
+       image: "https://c1.neweggimages.com/productimage/nb640/20-236-879-03.jpg",
         specifications: {
             "Modelo": "CORSAIR Vengeance RGB",
             "Capacidad": "32 GB (2 × 16 GB)",
