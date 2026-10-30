@@ -64,24 +64,26 @@ const products = [
     },
 
     {
-        id: "MB-004",
-        name: "Smartphone Android",
-        category: "mobile",
-        label: "Celular",
-        brand: "Varias marcas",
-        price: 799.99,
-        featured: false,
-        description: "Teléfono inteligente para aplicaciones, fotografía, comunicación y entretenimiento.",
-        search: "unlocked Android smartphone",
-        productUrl: "https://www.newegg.com/p/pl?d=unlocked+Android+smartphone",
-        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
-        specifications: {
-            "Categoría": "Smartphone",
-            "Sistema": "Android, según modelo",
-            "Conectividad": "Consultar modelo específico",
-            "Cámara": "Consultar modelo específico"
-        }
-    },
+       {
+    id: "MB-004",
+    name: "Samsung Galaxy A16 5G",
+    category: "mobile",
+    label: "Smartphone Android",
+    brand: "Samsung",
+    price: 199.99,
+    featured: false,
+    description: "Smartphone Android 5G con pantalla Super AMOLED de 6.7 pulgadas y 128 GB de almacenamiento.",
+    search: "Samsung Galaxy A16 5G",
+    productUrl: "https://www.bestbuy.com/product/samsung-galaxy-a16-5g-128gb-unlocked-blue-black/11252838",
+    image: "https://images.samsung.com/is/image/samsung/p6pim/us/sm-a166uzkaxaa/gallery/us-galaxy-a16-5g-sm-a166-sm-a166uzkaxaa-544544836",
+    specifications: {
+        "Modelo": "Galaxy A16 5G",
+        "Pantalla": "6.7 pulgadas Super AMOLED",
+        "Almacenamiento": "128 GB",
+        "Conectividad": "5G",
+        "Sistema operativo": "Android"
+    }
+},
 
     {
         id: "CP-005",
@@ -191,24 +193,28 @@ const products = [
     },
 
     {
-        id: "MB-010",
-        name: "Smartphone Android Compacto",
-        category: "mobile",
-        label: "Celular",
-        brand: "Varias marcas",
-        price: 499.99,
-        featured: false,
-        description: "Teléfono inteligente para comunicación, aplicaciones y entretenimiento en un formato compacto.",
-        search: "compact unlocked Android smartphone",
-        productUrl: "https://www.newegg.com/p/pl?d=compact+unlocked+Android+smartphone",
-        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
-        specifications: {
-            "Categoría": "Smartphone",
-            "Formato": "Compacto, según modelo",
-            "Sistema operativo": "Consultar modelo específico",
-            "Almacenamiento": "Consultar modelo específico"
-        }
-    },
+       {
+    id: "MB-010",
+    name: "Unihertz Jelly Star",
+    category: "mobile",
+    label: "Smartphone Android Compacto",
+    brand: "Unihertz",
+    price: 219.99,
+    featured: false,
+    description: "Smartphone Android ultracompacto con pantalla de 3 pulgadas, diseño transparente y luces LED.",
+    search: "Unihertz Jelly Star",
+    productUrl: "https://www.unihertz.com/products/jelly-star",
+    image: "https://www.unihertz.com/cdn/shop/files/Jelly_Star_Blue_1.jpg",
+    specifications: {
+        "Modelo": "Jelly Star",
+        "Pantalla": "3.0 pulgadas",
+        "Procesador": "MediaTek Helio G99",
+        "RAM": "8 GB",
+        "Almacenamiento": "256 GB",
+        "Sistema operativo": "Android 13",
+        "Cámara trasera": "48 MP"
+    }
+}
 
     {
         id: "DT-011",
