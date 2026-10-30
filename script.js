@@ -1,134 +1,123 @@
-// ============================================
-// BYTE BAZAAR — CATÁLOGO RETRO
-// ============================================
+
+/* =========================================================
+   BYTE BAZAAR — PRODUCT CATALOG
+   Complete script.js
+   ========================================================= */
 
 const products = [
     {
         id: "WS-001",
         name: "Workstation Creator Pro",
         category: "workstation",
-        label: "Estación de trabajo",
-        brand: "CyberPowerPC",
-        price: 2259.99,
+        label: "Workstation",
+        brand: "BYTE BAZAAR",
+        price: 2499.99,
         featured: true,
-        description: "Equipo de alto rendimiento para creación de contenido, diseño y multitarea.",
-        search: "CyberPowerPC workstation creator desktop",
-        productUrl: "https://www.newegg.com/p/pl?d=CyberPowerPC+workstation+desktop",
-        image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg",
+        description: "Estación de trabajo diseñada para creación de contenido, edición de video y tareas profesionales.",
+        search: "workstation creator pro computadora profesional",
+        productUrl: "",
+        image: "",
         specifications: {
-            "Categoría": "Estación de trabajo",
-            "Uso": "Creación de contenido y productividad",
-            "Configuración": "Verificar en la página del vendedor"
+            "Tipo": "Workstation",
+            "Uso": "Creación de contenido",
+            "Categoría": "Computadora profesional"
         }
     },
-
     {
         id: "DT-002",
-        name: "ABS Flux II Gaming PC",
+        name: "Desktop Gaming Tower",
         category: "desktop",
-        label: "Desktop gaming",
-        brand: "ABS",
-        price: 1799.99,
+        label: "Desktop Gaming",
+        brand: "BYTE BAZAAR",
+        price: 1399.99,
         featured: true,
-        description: "PC gaming con procesador Intel Core i7, gráficos GeForce RTX 5070 y memoria DDR5.",
-        search: "ABS Flux II Aqua i7-14700F RTX 5070",
-        productUrl: "https://www.newegg.com/p/pl?d=ABS+Flux+II+Aqua+i7-14700F+RTX+5070",
-        image: "https://c1.neweggimages.com/productimage/nb640/83-360-491-01.jpg",
+        description: "Computadora de escritorio para gaming, multitarea y entretenimiento.",
+        search: "desktop gaming tower pc computadora gaming",
+        productUrl: "",
+        image: "",
         specifications: {
-            "Procesador": "Intel Core i7-14700F",
-            "Tarjeta gráfica": "GeForce RTX 5070 de 12 GB",
-            "Memoria": "32 GB DDR5",
-            "Almacenamiento": "SSD NVMe de 1 TB",
-            "Sistema operativo": "Windows 11 Home"
+            "Tipo": "Desktop",
+            "Uso": "Gaming",
+            "Formato": "Torre"
         }
     },
-
     {
         id: "LP-003",
-        name: "Laptop MSI Gaming",
+        name: "Laptop Performance 16",
         category: "laptop",
         label: "Laptop",
-        brand: "MSI",
+        brand: "BYTE BAZAAR",
         price: 1199.99,
-        featured: true,
-        description: "Laptop orientada a videojuegos, aplicaciones exigentes y productividad.",
-        search: "MSI gaming laptop 16 inch",
-        productUrl: "https://www.newegg.com/p/pl?d=MSI+gaming+laptop+16+inch",
-        image: "https://c1.neweggimages.com/productimage/nb640/34-156-634-01.jpg",
+        featured: false,
+        description: "Laptop de alto rendimiento para productividad, trabajo y entretenimiento.",
+        search: "laptop performance 16 pulgadas",
+        productUrl: "",
+        image: "",
         specifications: {
-            "Marca": "MSI",
-            "Categoría": "Laptop gaming",
-            "Pantalla": "Consultar modelo específico",
-            "Gráficos": "Consultar modelo específico"
+            "Tipo": "Laptop",
+            "Pantalla": "16 pulgadas",
+            "Uso": "Productividad y entretenimiento"
         }
     },
-
     {
-       {
-    id: "MB-004",
-    name: "Samsung Galaxy A16 5G",
-    category: "mobile",
-    label: "Smartphone Android",
-    brand: "Samsung",
-    price: 199.99,
-    featured: false,
-    description: "Smartphone Android 5G con pantalla Super AMOLED de 6.7 pulgadas y 128 GB de almacenamiento.",
-    search: "Samsung Galaxy A16 5G",
-    productUrl: "https://www.bestbuy.com/product/samsung-galaxy-a16-5g-128gb-unlocked-blue-black/11252838",
-    image: "https://images.samsung.com/is/image/samsung/p6pim/us/sm-a166uzkaxaa/gallery/us-galaxy-a16-5g-sm-a166-sm-a166uzkaxaa-544544836",
-    specifications: {
-        "Modelo": "Galaxy A16 5G",
-        "Pantalla": "6.7 pulgadas Super AMOLED",
-        "Almacenamiento": "128 GB",
-        "Conectividad": "5G",
-        "Sistema operativo": "Android"
-    }
-},
-
+        id: "MB-004",
+        name: "Samsung Galaxy A16 5G",
+        category: "mobile",
+        label: "Smartphone Android",
+        brand: "Samsung",
+        price: 199.99,
+        featured: false,
+        description: "Smartphone Android 5G con pantalla Super AMOLED de 6.7 pulgadas y 128 GB de almacenamiento.",
+        search: "Samsung Galaxy A16 5G",
+        productUrl: "https://www.samsung.com/us/smartphones/galaxy-a16-5g/",
+        image: "",
+        specifications: {
+            "Modelo": "Galaxy A16 5G",
+            "Pantalla": "6.7 pulgadas Super AMOLED",
+            "Almacenamiento": "128 GB",
+            "Conectividad": "5G",
+            "Sistema operativo": "Android"
+        }
+    },
     {
         id: "CP-005",
         name: "GIGABYTE GeForce RTX 5070",
         category: "component",
         label: "Tarjeta gráfica",
-        brand: "GIGABYTE / NVIDIA",
+        brand: "GIGABYTE",
         price: 649.99,
         featured: true,
-        description: "Tarjeta gráfica GeForce RTX 5070 con 12 GB de memoria para gaming y creación de contenido.",
+        description: "Tarjeta gráfica NVIDIA GeForce RTX 5070 con 12 GB de memoria GDDR7.",
         search: "GIGABYTE GeForce RTX 5070 12GB",
         productUrl: "https://www.newegg.com/gigabyte-gv-n5070gaming-oc-12gd-geforce-rtx-5070-12gb-graphics-card-triple-fans/p/N82E16814932774",
         image: "https://c1.neweggimages.com/productimage/nb640/14-932-774-01.jpg",
         specifications: {
-            "Fabricante": "GIGABYTE",
-            "GPU": "NVIDIA GeForce RTX 5070",
-            "Memoria gráfica": "12 GB",
-            "Tipo de memoria": "GDDR7",
-            "Uso": "Gaming y creación de contenido"
+            "Modelo": "GeForce RTX 5070",
+            "Memoria": "12 GB GDDR7",
+            "Marca": "GIGABYTE",
+            "Tipo": "Tarjeta gráfica"
         }
     },
-
     {
         id: "CP-006",
         name: "AMD Ryzen 7 9800X3D",
         category: "component",
         label: "Procesador",
         brand: "AMD",
-        price: 444.00,
+        price: 329.99,
         featured: true,
-        description: "Procesador de escritorio de 8 núcleos y 16 hilos, diseñado para ofrecer alto rendimiento en videojuegos.",
+        description: "Procesador AMD Ryzen 7 9800X3D para computadoras de escritorio con tecnología 3D V-Cache.",
         search: "AMD Ryzen 7 9800X3D",
         productUrl: "https://www.newegg.com/amd-ryzen-7-9000-series-ryzen-7-9800x3d-granite-ridge-zen-5-socket-am5-desktop-cpu-processor/p/N82E16819113877",
         image: "https://c1.neweggimages.com/productimage/nb640/19-113-877-01.jpg",
         specifications: {
             "Modelo": "Ryzen 7 9800X3D",
-            "Núcleos": "8",
-            "Hilos": "16",
-            "Frecuencia máxima": "Hasta 5.2 GHz",
+            "Marca": "AMD",
             "Socket": "AM5",
-            "TDP": "120 W",
-            "Memoria compatible": "DDR5"
+            "Arquitectura": "Zen 5",
+            "Tipo": "Procesador de escritorio"
         }
     },
-
     {
         id: "CP-007",
         name: "CORSAIR Vengeance RGB 32 GB",
@@ -139,8 +128,8 @@ const products = [
         featured: false,
         description: "Kit de memoria DDR5 de 32 GB compuesto por dos módulos de 16 GB, con iluminación RGB.",
         search: "CORSAIR Vengeance RGB 32GB DDR5 6000",
-        productUrl: "https://www.newegg.com/corsair-vengeance-rgb-32gb-ddr5-6000-cas-latency-cl36-desktop-memory-black/p/N82E16820236991",
-      image: "https://c1.neweggimages.com/productimage/nb1280/20-236-879-03.jpg",
+        productUrl: "https://www.newegg.com/corsair-vengeance-rgb-32gb-ddr5-6000-cas-latency-cl38-desktop-memory-black/p/N82E16820982128",
+        image: "https://c1.neweggimages.com/productimage/nb1280/20-236-879-03.jpg",
         specifications: {
             "Modelo": "CORSAIR Vengeance RGB",
             "Capacidad": "32 GB (2 × 16 GB)",
@@ -150,377 +139,402 @@ const products = [
             "Iluminación": "RGB"
         }
     },
-
     {
         id: "CP-008",
-        name: "Samsung 990 PRO 2 TB",
+        name: "SSD NVMe 2 TB",
         category: "component",
-        label: "SSD NVMe",
-        brand: "Samsung",
-        price: 409.99,
+        label: "Almacenamiento",
+        brand: "BYTE BAZAAR",
+        price: 149.99,
         featured: false,
-        description: "Unidad SSD NVMe PCIe 4.0 diseñada para almacenamiento rápido, videojuegos y estaciones de trabajo.",
-        search: "Samsung 990 PRO 2TB",
-        productUrl: "https://www.newegg.com/samsung-2tb-990-pro-nvme-2-0/p/N82E16820147861",
-        image: "https://c1.neweggimages.com/productimage/nb640/20-147-861-01.jpg",
+        description: "Unidad de almacenamiento SSD NVMe de 2 TB para mejorar la velocidad y capacidad del sistema.",
+        search: "SSD NVMe 2TB almacenamiento",
+        productUrl: "",
+        image: "",
         specifications: {
-            "Modelo": "Samsung 990 PRO",
             "Capacidad": "2 TB",
-            "Interfaz": "PCIe 4.0 x4 NVMe",
-            "Formato": "M.2 2280",
-            "Lectura secuencial anunciada": "Hasta 7,450 MB/s"
+            "Tipo": "SSD NVMe",
+            "Uso": "Almacenamiento interno"
         }
     },
-
     {
         id: "LP-009",
-        name: "Laptop Ultrabook 14",
+        name: "Laptop Ultraligera 14",
         category: "laptop",
         label: "Laptop",
-        brand: "Varias marcas",
+        brand: "BYTE BAZAAR",
         price: 899.99,
         featured: false,
-        description: "Laptop compacta para estudiantes, trabajo de oficina y productividad diaria.",
-        search: "14 inch ultrabook laptop",
-        productUrl: "https://www.newegg.com/p/pl?d=14+inch+ultrabook+laptop",
-        image: "https://c1.neweggimages.com/productimage/nb640/34-156-634-01.jpg",
+        description: "Laptop ultraligera de 14 pulgadas pensada para movilidad, estudios y productividad.",
+        search: "laptop ultraligera 14 pulgadas",
+        productUrl: "",
+        image: "",
         specifications: {
-            "Categoría": "Laptop ultraligera",
-            "Pantalla": "14 pulgadas, según modelo",
-            "Uso": "Estudio y productividad",
-            "Peso y batería": "Consultar modelo específico"
+            "Tipo": "Laptop",
+            "Pantalla": "14 pulgadas",
+            "Diseño": "Ultraligero",
+            "Uso": "Estudio y productividad"
         }
     },
-
     {
-       {
-    id: "MB-010",
-    name: "Unihertz Jelly Star",
-    category: "mobile",
-    label: "Smartphone Android Compacto",
-    brand: "Unihertz",
-    price: 219.99,
-    featured: false,
-    description: "Smartphone Android ultracompacto con pantalla de 3 pulgadas, diseño transparente y luces LED.",
-    search: "Unihertz Jelly Star",
-    productUrl: "https://www.unihertz.com/products/jelly-star",
-    image: "https://www.unihertz.com/cdn/shop/files/Jelly_Star_Blue_1.jpg",
-    specifications: {
-        "Modelo": "Jelly Star",
-        "Pantalla": "3.0 pulgadas",
-        "Procesador": "MediaTek Helio G99",
-        "RAM": "8 GB",
-        "Almacenamiento": "256 GB",
-        "Sistema operativo": "Android 13",
-        "Cámara trasera": "48 MP"
-    }
-}
-
+        id: "MB-010",
+        name: "Unihertz Jelly Star",
+        category: "mobile",
+        label: "Smartphone Android Compacto",
+        brand: "Unihertz",
+        price: 219.99,
+        featured: false,
+        description: "Smartphone Android ultracompacto con pantalla de 3 pulgadas, diseño transparente y luces LED.",
+        search: "Unihertz Jelly Star",
+        productUrl: "https://www.unihertz.com/products/jelly-star",
+        image: "",
+        specifications: {
+            "Modelo": "Jelly Star",
+            "Pantalla": "3.0 pulgadas",
+            "Procesador": "MediaTek Helio G99",
+            "RAM": "8 GB",
+            "Almacenamiento": "256 GB",
+            "Sistema operativo": "Android 13",
+            "Cámara trasera": "48 MP"
+        }
+    },
     {
         id: "DT-011",
-        name: "CyberPowerPC Gaming Desktop",
+        name: "Desktop Oficina",
         category: "desktop",
         label: "Desktop",
-        brand: "CyberPowerPC",
-        price: 2259.99,
+        brand: "BYTE BAZAAR",
+        price: 599.99,
         featured: false,
-        description: "Computadora de escritorio con procesador Ryzen 7 9800X3D, memoria DDR5 y gráficos dedicados.",
-        search: "CyberPowerPC Ryzen 7 9800X3D gaming desktop",
-        productUrl: "https://www.newegg.com/p/pl?d=CyberPowerPC+Ryzen+7+9800X3D+gaming+desktop",
-        image: "https://c1.neweggimages.com/productimage/nb640/83-360-502-01.jpg",
+        description: "Computadora de escritorio para tareas de oficina, navegación, estudios y productividad diaria.",
+        search: "desktop oficina computadora trabajo",
+        productUrl: "",
+        image: "",
         specifications: {
-            "Procesador buscado": "AMD Ryzen 7 9800X3D",
-            "Categoría": "PC gaming",
-            "Gráficos": "Consultar configuración",
-            "Memoria y almacenamiento": "Consultar configuración"
+            "Tipo": "Desktop",
+            "Uso": "Oficina y productividad",
+            "Formato": "Torre"
         }
     },
-
     {
         id: "CP-012",
-        name: "MSI MAG A850GL PCIE5",
+        name: "Fuente de Poder 850 W",
         category: "component",
         label: "Fuente de poder",
-        brand: "MSI",
-        price: 109.99,
+        brand: "BYTE BAZAAR",
+        price: 129.99,
         featured: false,
-        description: "Fuente de alimentación modular de 850 W con certificación 80 PLUS Gold y compatibilidad ATX 3.1.",
-        search: "MSI MAG A850GL PCIE5 850W",
-        productUrl: "https://www.newegg.com/msi-atx12v-850-w-80-plus-gold-certified-power-supplies-black-mag-a850gl-pcie5/p/N82E16817701021",
-        image: "https://c1.neweggimages.com/productimage/nb640/17-701-021-01.jpg",
+        description: "Fuente de alimentación de 850 W para computadoras de escritorio y sistemas gaming.",
+        search: "fuente de poder PSU 850W",
+        productUrl: "",
+        image: "",
         specifications: {
-            "Modelo": "MSI MAG A850GL PCIE5",
             "Potencia": "850 W",
-            "Certificación": "80 PLUS Gold",
-            "Diseño": "Totalmente modular",
-            "Estándar": "ATX 3.1",
-            "Garantía anunciada": "10 años; verificar condiciones"
+            "Tipo": "Fuente de alimentación",
+            "Uso": "Computadora de escritorio"
         }
     }
 ];
 
+/* =========================================================
+   ELEMENTOS DEL HTML
+   ========================================================= */
 
-// ============================================
-// CATEGORÍAS
-// ============================================
+const productGrid = document.getElementById("productGrid");
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const sortFilter = document.getElementById("sortFilter");
+const resultCount = document.getElementById("resultCount");
+const emptyState = document.getElementById("emptyState");
+const resetFilters = document.getElementById("resetFilters");
+const yearElement = document.getElementById("year");
 
-const categoryNames = {
-    workstation: "Workstation",
-    desktop: "Desktop",
-    laptop: "Laptop",
-    mobile: "Celulares móviles",
-    component: "Componentes"
-};
+/* =========================================================
+   IMÁGENES DE RESPALDO
+   ========================================================= */
 
+function getFallbackImage(category) {
+    const icons = {
+        workstation: "▣",
+        desktop: "▤",
+        laptop: "▱",
+        mobile: "▯",
+        component: "⚙"
+    };
 
-// ============================================
-// ELEMENTOS HTML
-// ============================================
-
-const productGrid = document.querySelector("#productGrid");
-const searchInput = document.querySelector("#searchInput");
-const categoryFilter = document.querySelector("#categoryFilter");
-const sortFilter = document.querySelector("#sortFilter");
-const resultCount = document.querySelector("#resultCount");
-const emptyState = document.querySelector("#emptyState");
-const resetFilters = document.querySelector("#resetFilters");
-const yearElement = document.querySelector("#year");
-
-
-// ============================================
-// FORMATO DE PRECIO
-// ============================================
-
-function formatPrice(price) {
-    return new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD"
-    }).format(price);
-}
-
-
-// ============================================
-// IMAGEN DE RESPALDO
-// ============================================
-
-function createFallbackImage(name, category) {
-    const safeName = String(name)
-        .replace(/[&<>"']/g, "")
-        .slice(0, 35);
+    const icon = icons[category] || "▣";
 
     const svg = `
-        <svg xmlns="http://www.w3.org/2000/svg"
-             width="380" height="250"
-             viewBox="0 0 380 250">
-
-            <rect width="380" height="250" fill="#e7e4d4"/>
-
-            <g fill="none" stroke="#202820" stroke-width="4">
-                <rect x="120" y="45" width="140" height="110" rx="4"/>
-                <rect x="132" y="57" width="116" height="85"/>
-                <path d="M180 155v22h20v-22 M150 182h80"/>
-            </g>
-
-            <g fill="#202820" font-family="monospace" text-anchor="middle">
-                <text x="190" y="100" font-size="13">BYTE / 001</text>
-                <text x="190" y="215" font-size="12">${safeName}</text>
-                <text x="190" y="232" font-size="9">${category.toUpperCase()}</text>
-            </g>
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+            <rect width="600" height="420" fill="#07110b"/>
+            <rect x="18" y="18" width="564" height="384" rx="8"
+                fill="none" stroke="#39ff78" stroke-width="3" opacity=".55"/>
+            <text x="300" y="215" text-anchor="middle"
+                font-family="monospace" font-size="100" fill="#39ff78">${icon}</text>
+            <text x="300" y="285" text-anchor="middle"
+                font-family="monospace" font-size="23" fill="#39ff78">BYTE BAZAAR</text>
+            <text x="300" y="325" text-anchor="middle"
+                font-family="monospace" font-size="13" fill="#8ab99a">IMAGE NOT AVAILABLE</text>
         </svg>
     `;
 
-    return "data:image/svg+xml;charset=UTF-8," +
-        encodeURIComponent(svg);
+    return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
 }
 
+/* =========================================================
+   ENLACES DE PRODUCTOS
+   ========================================================= */
 
-// ============================================
-// CREAR TARJETA DE PRODUCTO
-// ============================================
+function getProductUrl(product) {
+    if (product.productUrl && product.productUrl.trim() !== "") {
+        return product.productUrl;
+    }
 
-function makeProductCard(product) {
+    // Solo se usa como respaldo para productos sin URL individual.
+    return "https://www.newegg.com/p/pl?d=" +
+        encodeURIComponent(product.search || product.name);
+}
+
+/* =========================================================
+   CREAR TARJETA DE PRODUCTO
+   ========================================================= */
+
+function createProductCard(product) {
     const card = document.createElement("article");
     card.className = "product-card";
 
-    const specsHTML = Object.entries(product.specifications || {})
-        .map(([key, value]) => `
-            <li><strong>${key}:</strong> ${value}</li>
-        `)
-        .join("");
+    const imageWrap = document.createElement("div");
+    imageWrap.className = "product-image-wrap";
 
-    card.innerHTML = `
-        <div class="product-image-wrap">
-            <span class="product-tag">
-                ${categoryNames[product.category]}
-            </span>
+    const image = document.createElement("img");
+    image.className = "product-image";
+    image.src = product.image || getFallbackImage(product.category);
+    image.alt = product.name;
+    image.loading = "lazy";
 
-            <img
-                src="${product.image}"
-                alt="${product.name}"
-                loading="lazy"
-            >
+    image.onerror = function () {
+        this.onerror = null;
+        this.src = getFallbackImage(product.category);
+    };
 
-            <span class="product-code">${product.id}</span>
-        </div>
+    imageWrap.appendChild(image);
 
-        <div class="product-info">
-            <span class="product-category">
-                ${categoryNames[product.category]}
-            </span>
+    const info = document.createElement("div");
+    info.className = "product-info";
 
-            <h3>${product.name}</h3>
+    const category = document.createElement("span");
+    category.className = "product-category";
+    category.textContent = product.label;
 
-            <p class="product-description">
-                ${product.description}
-            </p>
+    const id = document.createElement("span");
+    id.className = "product-id";
+    id.textContent = product.id;
 
-            <p class="product-brand">
-                MARCA: ${product.brand}
-            </p>
+    const heading = document.createElement("h3");
+    heading.textContent = product.name;
 
-            <details class="product-specifications">
-                <summary>VER ESPECIFICACIONES [+]</summary>
-                <ul>${specsHTML}</ul>
-            </details>
+    const brand = document.createElement("p");
+    brand.className = "product-brand";
+    brand.textContent = product.brand;
 
-            <div class="product-bottom">
-                <div class="price">
-                    ${formatPrice(product.price)}
-                    <small>PRECIO DE REFERENCIA</small>
-                </div>
+    const description = document.createElement("p");
+    description.className = "product-description";
+    description.textContent = product.description;
 
-                <a
-                    class="product-link"
-                    href="${product.productUrl}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    VER PRODUCTO ↗
-                </a>
-            </div>
-        </div>
-    `;
+    const price = document.createElement("p");
+    price.className = "product-price";
+    price.textContent = "$" + product.price.toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
 
-    const img = card.querySelector("img");
+    const link = document.createElement("a");
+    link.className = "product-link";
+    link.href = getProductUrl(product);
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "VER PRODUCTO ↗";
 
-    img.addEventListener("error", () => {
-        img.src = createFallbackImage(
-            product.name,
-            product.category
-        );
-    }, { once: true });
+    info.appendChild(category);
+    info.appendChild(id);
+    info.appendChild(heading);
+    info.appendChild(brand);
+    info.appendChild(description);
+    info.appendChild(price);
+    info.appendChild(link);
+
+    // Especificaciones desplegables
+    if (product.specifications) {
+        const details = document.createElement("details");
+        details.className = "product-details";
+
+        const summary = document.createElement("summary");
+        summary.textContent = "ESPECIFICACIONES";
+
+        const specs = document.createElement("ul");
+
+        Object.entries(product.specifications).forEach(([key, value]) => {
+            const item = document.createElement("li");
+            item.textContent = `${key}: ${value}`;
+            specs.appendChild(item);
+        });
+
+        details.appendChild(summary);
+        details.appendChild(specs);
+        info.appendChild(details);
+    }
+
+    card.appendChild(imageWrap);
+    card.appendChild(info);
 
     return card;
 }
 
+/* =========================================================
+   FILTRAR, BUSCAR Y ORDENAR
+   ========================================================= */
 
-// ============================================
-// FILTRAR Y ORDENAR
-// ============================================
+function getFilteredProducts() {
+    let filtered = [...products];
 
-function getVisibleProducts() {
-    const query = searchInput.value.trim().toLowerCase();
+    const searchTerm = searchInput
+        ? searchInput.value.trim().toLowerCase()
+        : "";
 
-    let category = categoryFilter.value;
+    const selectedCategory = categoryFilter
+        ? categoryFilter.value
+        : "all";
 
-    if (category === "components") {
-        category = "component";
+    const selectedSort = sortFilter
+        ? sortFilter.value
+        : "default";
+
+    if (searchTerm) {
+        filtered = filtered.filter(product => {
+            const searchableText = [
+                product.id,
+                product.name,
+                product.brand,
+                product.label,
+                product.category,
+                product.description,
+                product.search,
+                ...Object.values(product.specifications || {})
+            ].join(" ").toLowerCase();
+
+            return searchableText.includes(searchTerm);
+        });
     }
 
-    const visible = products.filter(product => {
-        const searchable = [
-            product.id,
-            product.name,
-            product.label,
-            product.brand,
-            product.description,
-            product.search,
-            categoryNames[product.category],
-            ...Object.keys(product.specifications || {}),
-            ...Object.values(product.specifications || {})
-        ].join(" ").toLowerCase();
+    if (selectedCategory && selectedCategory !== "all") {
+        filtered = filtered.filter(product =>
+            product.category === selectedCategory
+        );
+    }
 
-        const matchesQuery = searchable.includes(query);
-
-        const matchesCategory =
-            category === "all" ||
-            product.category === category;
-
-        return matchesQuery && matchesCategory;
-    });
-
-    switch (sortFilter.value) {
+    switch (selectedSort) {
+        case "price-low":
         case "price-asc":
-        case "low":
-            visible.sort((a, b) => a.price - b.price);
+            filtered.sort((a, b) => a.price - b.price);
             break;
 
+        case "price-high":
         case "price-desc":
-        case "high":
-            visible.sort((a, b) => b.price - a.price);
+            filtered.sort((a, b) => b.price - a.price);
             break;
 
-        case "name-asc":
         case "name":
-            visible.sort((a, b) =>
-                a.name.localeCompare(b.name, "es")
-            );
+        case "name-asc":
+            filtered.sort((a, b) => a.name.localeCompare(b.name));
             break;
 
+        case "name-desc":
+            filtered.sort((a, b) => b.name.localeCompare(a.name));
+            break;
+
+        case "default":
         default:
-            visible.sort((a, b) =>
-                Number(b.featured) - Number(a.featured)
-            );
+            filtered.sort((a, b) => {
+                if (a.featured !== b.featured) {
+                    return Number(b.featured) - Number(a.featured);
+                }
+
+                return a.id.localeCompare(b.id);
+            });
+            break;
     }
 
-    return visible;
+    return filtered;
 }
 
-
-// ============================================
-// MOSTRAR PRODUCTOS
-// ============================================
+/* =========================================================
+   MOSTRAR PRODUCTOS
+   ========================================================= */
 
 function renderProducts() {
-    const visible = getVisibleProducts();
+    if (!productGrid) {
+        console.error("BYTE BAZAAR: No se encontró #productGrid en el HTML.");
+        return;
+    }
 
-    productGrid.replaceChildren();
+    const filteredProducts = getFilteredProducts();
 
-    const cards = visible.map(makeProductCard);
-    productGrid.append(...cards);
+    productGrid.innerHTML = "";
 
-    resultCount.textContent =
-        `${String(visible.length).padStart(2, "0")} PRODUCTOS`;
+    filteredProducts.forEach(product => {
+        productGrid.appendChild(createProductCard(product));
+    });
 
-    emptyState.hidden = visible.length !== 0;
-    productGrid.hidden = visible.length === 0;
+    if (resultCount) {
+        resultCount.textContent =
+            `${filteredProducts.length} PRODUCTOS ENCONTRADOS`;
+    }
+
+    if (emptyState) {
+        emptyState.hidden = filteredProducts.length !== 0;
+    }
+
+    productGrid.hidden = filteredProducts.length === 0;
 }
 
+/* =========================================================
+   EVENTOS DE LOS FILTROS
+   ========================================================= */
 
-// ============================================
-// EVENTOS
-// ============================================
+if (searchInput) {
+    searchInput.addEventListener("input", renderProducts);
+}
 
-searchInput.addEventListener("input", renderProducts);
-categoryFilter.addEventListener("change", renderProducts);
-sortFilter.addEventListener("change", renderProducts);
+if (categoryFilter) {
+    categoryFilter.addEventListener("change", renderProducts);
+}
+
+if (sortFilter) {
+    sortFilter.addEventListener("change", renderProducts);
+}
 
 if (resetFilters) {
     resetFilters.addEventListener("click", () => {
-        searchInput.value = "";
-        categoryFilter.value = "all";
-        sortFilter.value = "default";
+        if (searchInput) searchInput.value = "";
+        if (categoryFilter) categoryFilter.value = "all";
+        if (sortFilter) sortFilter.value = "default";
+
         renderProducts();
     });
 }
+
+/* =========================================================
+   AÑO AUTOMÁTICO
+   ========================================================= */
 
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
 
-
-// ============================================
-// INICIAR
-// ============================================
+/* =========================================================
+   INICIAR CATÁLOGO
+   ========================================================= */
 
 renderProducts();
+
+console.log(`BYTE BAZAAR: ${products.length} productos cargados correctamente.`);
