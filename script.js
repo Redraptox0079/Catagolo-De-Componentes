@@ -73,8 +73,8 @@ const products = [
         featured: false,
         description: "Teléfono inteligente para aplicaciones, fotografía, comunicación y entretenimiento.",
         search: "unlocked Android smartphone",
-        productUrl: "https://www.newegg.com/p/pl?d=unlocked+Android+smartphone",
-        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
+       productUrl: "https://www.newegg.com/p/23B-0002-02060",
+image: "https://c1.neweggimages.com/productimage/nb1280/C4TPS2601200879UP9D.jpg",
         specifications: {
             "Categoría": "Smartphone",
             "Sistema": "Android, según modelo",
@@ -200,8 +200,8 @@ const products = [
         featured: false,
         description: "Teléfono inteligente para comunicación, aplicaciones y entretenimiento en un formato compacto.",
         search: "compact unlocked Android smartphone",
-       productUrl: "https://www.newegg.com/p/23B-0002-02060",
-image: "https://c1.neweggimages.com/productimage/nb1280/C4TPS2601200879UP9D.jpg",
+        productUrl: "https://www.newegg.com/p/pl?d=compact+unlocked+Android+smartphone",
+        image: "https://c1.neweggimages.com/productimage/nb640/75-151-073-01.jpg",
         specifications: {
             "Categoría": "Smartphone",
             "Formato": "Compacto, según modelo",
