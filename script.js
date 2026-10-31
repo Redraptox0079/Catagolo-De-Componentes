@@ -192,11 +192,11 @@ image: "https://c1.neweggimages.com/productimage/nb1280/C4TPS2601200879UP9D.jpg"
 
     {
         id: "MB-010",
-        name: "Smartphone Android Compacto",
+        name: "SAMSUNG Galaxy Z Flip 4",
         category: "mobile",
         label: "Celular",
         brand: "Varias marcas",
-        price: 499.99,
+        price: 579.97,
         featured: false,
         description: "Teléfono inteligente para comunicación, aplicaciones y entretenimiento en un formato compacto.",
         search: "compact unlocked Android smartphone",
