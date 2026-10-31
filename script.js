@@ -192,7 +192,7 @@ image: "https://c1.neweggimages.com/productimage/nb1280/C4TPS2601200879UP9D.jpg"
 
     {
         id: "MB-010",
-        name: "SAMSUNG Galaxy Z Flip 4",
+        name: "SAMSUNG Galaxy Z Flip 4 128GB",
         category: "mobile",
         label: "Celular",
         brand: "Varias marcas",
