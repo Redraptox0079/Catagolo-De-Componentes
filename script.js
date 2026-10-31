@@ -65,11 +65,11 @@ const products = [
 
     {
         id: "MB-004",
-        name: "Smartphone Android",
+        name: "Samsung Galaxy S22 Ultra 5G 128GB/256GB",
         category: "mobile",
         label: "Celular",
         brand: "Varias marcas",
-        price: 799.99,
+        price: 299.00,
         featured: false,
         description: "Teléfono inteligente para aplicaciones, fotografía, comunicación y entretenimiento.",
         search: "unlocked Android smartphone",
