@@ -32,8 +32,8 @@ const products = [
         featured: true,
         description: "PC gaming con procesador Intel Core i7, gráficos GeForce RTX 5070 y memoria DDR5.",
         search: "ABS Flux II Aqua i7-14700F RTX 5070",
-        productUrl: "https://www.newegg.com/p/pl?d=ABS+Flux+II+Aqua+i7-14700F+RTX+5070",
-        image: "https://c1.neweggimages.com/productimage/nb640/83-360-491-01.jpg",
+        productUrl: "https://www.newegg.com/abs-flux-ii-aqua-gaming-desktop-pc-geforce-rtx-5060-ti-intel-core-i7-14700f-32gb-ddr4-1tb-nvme-ssd-f2a47n56t1-black/p/N82E16883360924",
+image: "https://c1.neweggimages.com/productimage/nb1280/83-360-924-12.jpg",
         specifications: {
             "Procesador": "Intel Core i7-14700F",
             "Tarjeta gráfica": "GeForce RTX 5070 de 12 GB",
