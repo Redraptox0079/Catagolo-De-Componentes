@@ -28,7 +28,7 @@ const products = [
         category: "desktop",
         label: "Desktop gaming",
         brand: "ABS",
-        price: 1799.99,
+        price:1699.99,
         featured: true,
         description: "PC gaming con procesador Intel Core i7, gráficos GeForce RTX 5070 y memoria DDR5.",
         search: "ABS Flux II Aqua i7-14700F RTX 5070",
